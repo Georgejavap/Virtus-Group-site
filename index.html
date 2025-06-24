@@ -1,753 +1,45 @@
-<!DOCTYPE html> <!-- Declares this as an HTML5 document -->
-<html lang="en-GB"> <!-- Sets the language of the document to British English -->
+<!DOCTYPE html>
+<html lang="en-GB">
 <head>
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the site responsive on all devices -->
-    <title>Virtus Group</title> 
-    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file for styling -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtus Group</title>
+  <link rel="stylesheet" href="index.styles.css">
 </head>
-<body> <!-- Main body of the webpage begins -->
+<body>
+  <!-- Welcome screen -->
   <div class="welcome-screen"></div>
-  <!-- Top banner containing logo and main navigation -->
-  <div class="top-banner">
-    <div class="header-info">
-      <img src="header-content/logo.png" alt="Virtus-Group-Logo"> <!-- Site/company logo -->
+
+  <!-- Background video -->
+  <div class="video-background">
+    <video class="video-desktop" autoplay muted loop playsinline>
+      <source src="header-content/0623.mp4" type="video/mp4">
+    </video>
+    <video class="video-mobile" autoplay  loop playsinline>
+      <source src="header-content/portrait-background-video.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- Dropdown Trigger -->
+  <button id="menu-toggle" class="dropdown-trigger">▼ MENU</button>
+
+  <!-- Animated Dropdown Panel -->
+  <div id="dropdown-panel" class="dropdown-panel">
+    <div class="panel-content">
       <h1>Virtus Group</h1>
-      <!-- Navigation bar -->
       <nav>
-        <ul class="top-nav"> <!-- Navigation list -->
-          <li><a href="#home">Home</a></li> <!-- Anchor links scroll to sections -->
-          <li><a href="#trainers">Trainers</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#resources">Membership Login</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#events">Events</a></li>
+        <ul>
+          <li><a href="home.html">Our Gym</a></li>
+          <li><a href="membership.html">Membership Info</a></li>
+          <li><a href="events.html">Events</a></li>
         </ul>
       </nav>
-    </div> <!-- End of header-info -->
-  </div> <!-- End of top-banner -->
-  <!-- Header section with background video -->
-  <header id="top">
-    <div class="video-background">
-      <!-- Background video for desktop screens -->
-      <video class="video-desktop" autoplay muted loop playsinline>
-        <source src="header-content/0421-2.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <!-- Background video for mobile screens -->
-      <video class="video-mobile" autoplay muted loop playsinline>
-        <source src="header-content/portrait-background-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div> <!-- End of video-background -->
-  </header>
-
-    
-  <main> <!-- Main content area starts here -->
-    <!-- Backdrop for modal (dims background when modal is active) -->
-    <div id="typeform-backdrop" style="display: none;"></div>
-    <!-- Container for embedded Typeform -->
-      <div id="typeform-container" style="display: none;">
-        <button id="closeTypeformButton">✕</button> <!-- Button to close the Typeform modal -->
-      <!-- Embedded Typeform iframe -->
-        <iframe 
-          src="https://virtusgroupgyms.fillout.com/gymmembership"
-          style="border: none;" 
-          allow="camera; microphone; autoplay; encrypted-media;"> 
-        </iframe> <!-- Allows embedded media and permissions -->
-      </div>
-
-    <section id="home"> <!-- Home section of the website -->
-      <h2>Welcome to Virtus Group Gym</h2> <!-- Section heading -->
-        <p class="text-box">
-          Destination for all things fitness and wellness. At Virtus Group, we believe everyone has a fitness journey—either training for a sport or improving their image. Everyone has the right to develop their body and mind.
-        </p>
-      <h2>Our Gym</h2> <!-- Sub-heading introducing gym features -->
-        <br> <!-- Line break for spacing -->
-      <div class="widgets-container"> <!-- Container for all gym feature widgets -->
-        <details class="PT-widget first-widget" data-widget="weightlifting"> <!-- First collapsible widget for Weightlifting -->
-          <summary>Weightlifting</summary> <!-- Widget summary shown before expansion -->
-            <div class="widget-content"> <!-- Content shown when widget is expanded -->
-              <button class="close-widget">Close</button> <!-- Button to close the widget -->
-               <div class="weightlift-description"> <!-- Description of weightlifting area -->
-                 <h2 style="color: blue;">Build Strength & Power</h2>
-                 <p style="color: white;">
-                   Our weightlifting zone is equipped with top-tier barbells, dumbbells, racks, and platforms designed for both beginners and serious lifters. Whether you're training for strength, size, or performance, we provide the tools and space to help you progress.
-                 </p>
-               </div>
-             <div class="weightlift-features"> <!-- Key features of the weightlifting zone -->
-               <div class="feature-box">
-                 <h3 style="color: blue;">Olympic Platforms</h3>
-                 <p style="color: white;">Perfect for clean and jerks, snatches, and heavy deadlifts. Built with shock-absorbent flooring.</p>
-               </div>
-               <div class="feature-box">
-                 <h3 style="color: blue;">Free Weights</h3>
-                 <p style="color: white;">Over 3,000kg of free weights ranging from 2.5kg to 60kg dumbbells, barbells, and kettlebells.</p>
-               </div>
-               <div class="feature-box">
-                 <h3 style="color: blue;">Machines & Racks</h3>
-                 <p style="color: white;">State-of-the-art squat racks, bench presses, cable machines, and Smith machines.</p>
-               </div>
-             </div>
-             <div class="image-grid"> <!-- Image gallery for weightlifting -->
-               <div class="image-container"><img src="home-widget-1/image-1-widget-1.png" alt="Platform"></div>
-               <div class="image-container"><img src="home-widget-1/image-2-widget-1.png" alt="Free-weights"></div>
-               <div class="image-container"><img src="home-widget-1/image-3-widget-1.png" alt="Lifting-Rack"></div>
-               <div class="image-container"><img src="home-widget-1/image-4-widget-1.jpeg" alt="Training-in-action"></div>
-             </div>
-            </div>
-        </details>
-        <details class="PT-widget second-widget" data-widget="cardio"> <!-- Second collapsible widget for Cardio Areas -->
-          <summary>Cardio Areas</summary>
-            <div class="widget-content">
-              <button class="close-widget">Close</button>
-              <div class="cardio-description"> <!-- Description of cardio training zone -->
-               <h2 style="color: blue;">Endurance. Energy. Elevation.</h2>
-               <p style="color: white;">
-                  Our cardio areas are designed to keep your heart pumping and your energy high. Whether you're a morning treadmill runner or a late-night spin fanatic, our zone offers both comfort and intensity with equipment that adapts to your training level.
-                  With cityscape views, integrated media stations, and smart tracking technology, your cardio experience is both immersive and effective.
-               </p>
-              </div>
-              <div class="cardio-features"> <!-- Key features of the cardio area -->
-                <div class="feature-box">
-                 <h3 style="color: blue;">Treadmills & Stairmasters</h3>
-                 <p style="color: white;">Multiple incline, speed, and HIIT program options for all fitness levels. Shock-absorbing surfaces minimize joint strain.</p>
-                </div>
-                <div class="feature-box">
-                 <h3 style="color: blue;">Spin & Air Bikes</h3>
-                 <p style="color: white;">Perfect for high-intensity intervals or steady-state cardio, with adjustable resistance and ergonomic seating.</p>
-                </div>
-                <div class="feature-box">
-                 <h3 style="color: blue;">Rowing & Ellipticals</h3>
-                 <p style="color: white;">Low-impact options that boost cardiovascular health, balance, and full-body coordination.</p>
-                </div>
-              </div>
-              <div class="image-grid"> <!-- Image gallery for cardio area -->
-               <div class="image-container"><img src="home-widget-2/image-1-widget-2.png" alt="Treadmill-Zone"></div>
-               <div class="image-container"><img src="home-widget-2/image-2-widget-2.png" alt="Spin-Bikes"></div>
-               <div class="image-container"><img src="home-widget-2/image-3-widget-2.png" alt="Row-Machines"></div>
-               <div class="image-container"><img src="home-widget-2/image-4-widget-2.png" alt="Ellipticals-Area"></div>
-              </div>
-            </div>
-        </details>
-        <details class="PT-widget third-widget" data-widget="trainers"> <!-- Third collapsible widget for Personal Trainers -->
-          <summary>Personal Trainers</summary>
-            <div class="widget-content">
-              <button class="close-widget">Close</button> <!-- Button to close the widget -->
-              <div class="trainer-description"> <!-- Description of personal training services -->
-               <h2 style="color: blue;">Guided Progress. Personalised Results.</h2>
-               <p style="color: white;">
-                Our certified personal trainers are here to take your training to the next level. Whether your goal is fat loss, muscle gain, athletic performance, or rehabilitation, we match you with the right trainer to suit your journey.
-                Expect personalized programs, expert technique correction, nutrition advice, and accountability from experienced professionals who care about your progress.
-               </p>
-              </div>
-              <div class="trainer-features"> <!-- Key features of personal training services -->
-                <div class="feature-box">
-                 <h3 style="color: blue;">One-on-One Coaching</h3>
-                 <p style="color: white;">Get focused attention on your form, progress tracking, and goal-specific programming tailored to you.</p>
-                </div>
-                <div class="feature-box">
-                 <h3 style="color: blue;">Small Group Training</h3>
-                 <p style="color: white;">Train with a friend or in small groups of 3–5 with shared goals — keeping energy high and costs low.</p>
-                </div>
-                <div class="feature-box">
-                 <h3 style="color: blue;">Sports Performance</h3>
-                 <p style="color: white;">Speed, agility, and strength coaching for athletes preparing for competitions or improving physical performance.</p>
-                </div>
-              </div>
-              <div class="image-grid"> <!-- Image gallery for personal training -->
-               <div class="image-container"><img src="home-widget-3/image-1-widget-3.jpeg" alt="Personal-Coaching"></div>
-               <div class="image-container"><img src="home-widget-3/image-2-widget-3.png" alt="Trainer-with-Client"></div>
-               <div class="image-container"><img src="home-widget-3/image-3-widget-3.png" alt="Small-Group-Training"></div>
-               <div class="image-container"><img src="home-widget-3/image-4-widget-3.png" alt="Sports-Performance-Coaching"></div>
-              </div>
-            </div>
-        </details>
-        <div class="icon-container"> <!-- Container for icon-based navigation -->
-          <div class="icon-group">
-            <div class="icon-item">
-              <img src="home-icon-content/image-1-icons.png" alt="Weightlifting-Icon"> <!-- Icon for weightlifting -->
-            </div>
-              <p>Weight lifting</p>
-          </div>
-                
-          <div class="icon-group">
-            <div class="icon-item">
-              <img src="home-icon-content/image-2-icons.png" alt="Cardio-Icon"> <!-- Icon for cardio -->
-            </div>
-              <p>Cardio Areas</p>
-          </div>
-                
-          <div class="icon-group">
-            <div class="icon-item">
-              <img src="home-icon-content/image-3-icons.png" alt="Personal-Trainers-Icon"> <!-- Icon for trainers -->
-            </div>
-              <p>Personal Trainers</p>
-          </div>
-        </div>
-        <div class="fade-container"> <!-- Container for auto-fading promotional paragraphs -->
-            <div class="fade-paragraph fade-1">
-              <p>Our gym is equipped with the latest technology and equipment to help you achieve your fitness goals. We offer a variety of classes, personal training sessions, and wellness programs to cater to all fitness levels.</p>
-            </div>
-            <div class="fade-paragraph fade-2">
-              <p>At our facility, we believe fitness is more than a routine — it’s a lifestyle. From strength and conditioning to recovery and wellness, our space is designed to support every step of your journey.</p>
-            </div>
-            <div class="fade-paragraph fade-3">
-              <p>Whether you're just starting out or pushing elite performance, our expert trainers and supportive community help you train smarter, recover faster, and stay motivated throughout.</p>
-            </div>
-            <div class="fade-paragraph fade-4">
-              <p>With 24/7 access, a fully immersive training environment, and dedicated zones for cardio, weightlifting, and functional fitness, we give you the freedom and flexibility to own your fitness.</p>
-            </div>
-        </div> 
-      </div> <!-- Close widgets-container -->
-    </section> <!-- End of Home Section -->
-
-
-    <section id="trainers" class="angled-section"> <!-- Section showcasing personal trainers; styled with angled background -->
-      <div class="angled-content"> <!-- Wrapper for angled layout content -->
-        <div class="left-text"> <!-- Left side containing text content -->
-          <h2 style="color: blue;">Meet Our Expert Team</h2> <!-- Heading introducing the trainers -->
-          <p>Our staff includes world-class trainers and specialists dedicated to your success. Each member brings unique skills and experience to help you meet your goals.</p> <!-- Brief description -->
-          <button id="open-modal">BOOK A DESIGN CONSULTATION</button> <!-- Button to trigger modal for booking -->
-        </div>
-        <div class="right-image"></div> <!-- Right side (likely styled with background image in CSS) -->
-      </div>
-    </section>
-    <!-- Modal Popup for Design Consultation -->
-    <div id="consultation-modal" class="modal-overlay"> <!-- Modal overlay background -->
-      <div class="modal-content"> <!-- Modal dialog box -->
-        <h2>Book a Design Consultation</h2> <!-- Modal heading -->
-          <form id="consultation-form"> <!-- Consultation booking form -->
-            <input type="text" placeholder="Full Name" required> <!-- User full name input -->
-            <input type="email" placeholder="Email Address" required> <!-- User email input -->
-            <textarea placeholder="What are your fitness goals?" rows="4" required></textarea> <!-- Text area for goals -->
-            <button type="submit">Submit</button> <!-- Submit button -->
-          </form>
-        <span class="close-modal">&times;</span> <!-- 'X' icon to close the modal -->
-      </div>
-    </div>
-
-
-    <section id="about"> <!-- 'About' section providing information about Virtus Group -->
-      <div class="about-container"> <!-- Main container for the about section -->
-        <h2>About Virtus Group</h2> <!-- Section heading -->
-        <p style="color: black;"  class="about-intro">
-          At Virtus Group, fitness meets purpose...
-        </p>
-        <div class="about-grid-layout"> <!-- Grid layout divides section into timeline and right-side content -->
-          <div class="timeline-column"> <!-- Left column dedicated to the timeline -->
-            <div class="virtus-timeline"> <!-- Timeline container -->
-              <h3 class="timeline-title">Timeline</h3> <!-- Timeline heading -->
-                <ul class="timeline"> <!-- List of timeline events -->
-                  <li class="timeline-item" data-icon="🏋️‍♂️"> <!-- Timeline item for 2018 -->
-                    <div class="timeline-date">2018</div>
-                      <div class="timeline-content">
-                        <h4>Founded</h4>
-                        <p>Virtus Group opens its doors...</p>
-                      </div>
-                  </li>
-                  <li class="timeline-item" data-icon="📱"> <!-- Timeline item for 2020 -->
-                    <div class="timeline-date">2020</div>
-                      <div class="timeline-content">
-                        <h4>Expansion & Digital Growth</h4>
-                        <p>Launched our mobile fitness tracking app and expanded facilities with dedicated strength and mobility zones.</p>
-                      </div>
-                  </li>
-                  <li class="timeline-item" data-icon="🤖"> <!-- Timeline item for 2023 -->
-                    <div class="timeline-date">2023</div>
-                      <div class="timeline-content">
-                        <h4>Futuristic Upgrade</h4>
-                        <p>Introduced AI-guided personal training pods and integrated biometric feedback into equipment.</p>
-                      </div>
-                  </li>
-                  <li class="timeline-item" data-icon="🌐"> <!-- Timeline item for 2024 -->
-                    <div class="timeline-date">2024</div>
-                      <div class="timeline-content">
-                        <h4>Community Platform</h4>
-                        <p>Launched VirtusConnect – a virtual platform for remote coaching, live workouts, and performance analytics.</p>
-                      </div>
-                  </li>
-                  <li class="timeline-item" data-icon="🚀"> <!-- Timeline item for 2025 -->
-                    <div class="timeline-date">2025</div>
-                      <div class="timeline-content">
-                        <h4>Next Gen Facilities</h4>
-                        <p>Plans for fully immersive VR training zones, AI-driven class programming, and international expansion underway.</p>
-                      </div>
-                  </li>
-                </ul>
-            </div>
-          </div> <!-- /timeline-column -->
-          <!-- Right column: All other content -->
-          <div class="about-right-content"> <!-- Right column containing features, info boxes, and map -->
-            <div class="about-grid"> <!-- Grid layout for features -->
-              <div class="about-feature"> <!-- Feature: Built for Tomorrow -->
-                <h3>🚀 Built for Tomorrow</h3>
-                <p>Step into a next-gen fitness environment engineered for the future. 
-                   Our facility features AI-powered pods that adapt workouts in real-time, 
-                   ambient lighting that reacts to your energy output, 
-                   and smart flooring that tracks motion and posture accuracy to reduce injury and enhance performance.
-                </p>
-              </div>
-              <div class="about-feature"> <!-- Feature: Smart Fitness -->
-                <h3>🧠 Smart Fitness</h3>
-                <p>From biometric wearables to live performance dashboards, Virtus enables you to unlock your body's full potential. 
-                   Receive instant insights into recovery, VO₂ max, and mobility while syncing your progress with your personalised 
-                   Virtus training plan — accessible both in-house and on the go.
-                </p>
-              </div>
-              <div class="about-feature"> <!-- Feature: Community Culture -->
-                <h3>🤝 Community Culture</h3>
-                <p>More than machines — we build meaningful connections.
-                   Whether you're attending a beginner workshop, recovery session, or elite competition training, you're part of a team that lifts each other up. 
-                   Our inclusive events, wellness check-ins, and member socials keep you engaged and motivated.
-                </p>
-              </div>
-              <div class="about-feature"> <!-- Feature: Virtual Integration -->
-                <h3>🌐 Virtual Integration</h3>
-                <p>Through VirtusConnect, bring the gym to your fingertips. Access remote live sessions, AI-personalised programs, and one-on-one coaching — 
-                   all synchronised with your wearable data. It's a full hybrid training experience, whether you're at home, travelling, 
-                   or in one of our partner gyms globally.
-                </p>
-              </div>
-            </div>
-            <!-- Contact Info Boxes -->
-            <div class="info-layout"> <!-- Layout for opening hours, address, and contact -->
-              <div class="contact-box"> <!-- Box: Opening Hours -->
-                <h3 style="color: white;">Opening Hours</h3>
-                <table>
-                  <tr><th></th><th>Open</th><th>Close</th></tr>
-                  <tr><td>Mon – Fri</td><td>09:00</td><td>21:00</td></tr>
-                  <tr><td>Weekend</td><td>10:00</td><td>22:00</td></tr>
-                </table>
-              </div>
-              <div class="contact-box"> <!-- Box: Address -->
-                <h3 style="color: white;">Address</h3>
-                <p style="color: white;">Virtus Group<br>Rowley Road<br>Boston, PE21 6JE</p>
-              </div>
-              <div class="contact-box"> <!-- Box: Contact Info -->
-                <h3 style="color: #080fdf">Contact Us</h3>
-                <p style="color: white;"><strong>Phone:</strong> 0800 567 435</p>
-                <p style="color: white;"><strong>Email:</strong> <a href="mailto:virtusgroup@gmail.com">virtusgroup@gmail.com</a></p>
-              </div>
-            </div>
-            <!-- Map Section -->
-            <div class="map-wrapper"> <!-- Container for embedded Google Map -->
-              <p class="map-paragraph">📍 Our Location</p>
-             <div class="map-container"> <!-- Embedded map iframe -->
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3215.9219028706593!2d-0.01780162259704524!3d52.974393272183754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48780a114c52a16f%3A0xb6a66837b260c127!2sGeoff%20Moulder%20Leisure%20Complex!5e1!3m2!1sen!2suk!4v1748535907440!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
-             </div>
-            </div>
-          </div> <!-- /about-right-content -->
-        </div> <!-- /about-grid-layout -->
-      </div>
-    </section>
-
-    <section id="resources"> <!-- Membership resources section -->
-        <!-- Protected Widget (covering the whole section) -->
-      <div class="protected-widget" id="protectedWidget"> <!-- Main protected section container -->
-        <video autoplay muted loop playsinline class="widget-video-protected desktop"> <!-- Desktop background video -->
-          <source src="resources-front-video/resources-background-landscape.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <video autoplay muted loop playsinline class="widget-video-protected mobile"> <!-- Mobile background video -->
-          <source src="resources-front-video/resources-background.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-          <!-- Login Form -->
-        <div class="login-form" id="loginForm"> <!-- Login form to unlock content -->
-          <h3>Login into your membership portal</h3>
-          <input type="text" id="widgetUsername" name="username" placeholder="Username"> <!-- Username field -->
-          <input type="password" id="widgetPassword" placeholder="Password"> <!-- Password field -->
-          <button onclick="unlockWidget()">Unlock</button> <!-- Unlock button triggers JS -->
-          <div id="errorMessage" class="error-message"></div> <!-- Display login errors -->
-        </div>
-      </div>
-      
-      <div class="widget-content-protected" id="widgetContentProtected" style="display: none;"> <!-- Hidden content shown after login -->
-        <div class="widget-header"> <!-- Header with unlock title and close option -->
-          <h3 style="color: white;">🔓 Your Membership</h3>
-          <button style="color: white;"    class="close-btn" onclick="closeWidget()">✖</button>
-        </div>
-        <p style="color: white;">This content is now unlocked. You can place secure downloads, staff tools, or private data here.</p>
-          
-        <div class="membership-sections blog-content"> <!-- Section containing membership resource cards -->
-          <div class="blog-card"> <!-- Resource Card 1: Nutrition Plans -->
-            <img src="resources-content/image1.png" alt="Nutrition-Plans">
-            <div class="blog-info">
-              <h3>🥗 Nutrition Plans</h3>
-              <p>Personalized meal plans, macro guides, and healthy recipes crafted by experts.</p>
-              <a href="https://www.nutrition.org.uk/media/rxldz0ol/bnf-s-7-day-meal-planner.pdf" target="_blank" class="button-link">View Plan</a>
-            </div>
-          </div>
-          <div class="blog-card"> <!-- Resource Card 2: Mental Wellbeing -->
-            <img src="resources-content/image2.png" alt="Mental-Wellbeing">
-            <div class="blog-info">
-              <h3>🧠 Mental Wellbeing</h3>
-              <p>Meditations, mindset journals, and wellness tools for mental clarity.</p>
-              <a href="https://open.spotify.com/episode/3bGt5wV2sOE96Y8dZDu4RW?si=UWckYOtlQe2mBo1sPpIGfw" target="_blank" class="button-link">Listen Now!</a>
-            </div>
-          </div>
-          <div class="blog-card"> <!-- Resource Card 3: Yoga & PT Schedule -->
-            <img src="resources-content/image3.png" alt="Yoga-&-PT">
-            <div class="blog-info">
-              <h3>🧘 Yoga & 🏋️‍♂️ PT Schedule</h3>
-              <p>Weekly class schedules and bookable PT sessions.</p>
-              <a href="https://www.puregym.com/gyms/boston/timetable/" target="_blank" class="button-link">Checkout the Classes!</a>
-            </div>
-          </div>
-          <div class="blog-card"> <!-- Resource Card 4: Gym Guide -->
-            <img src="resources-content/image4.png" alt="Gym-Guide">
-            <div class="blog-info">
-              <h3>📘 Gym Guide</h3>
-              <p>First time here? Start with our intro video and facility guide.</p>
-              <a href="https://www.muscleandstrength.com/workout-routines" target="_blank" class="button-link">Exceptional Gym Guides</a>
-            </div>
-          </div>
-          <div class="blog-card"> <!-- Resource Card 5: Fitness Plan -->
-            <img src="resources-content/image5.png" alt="Fitness-Plan">
-            <div class="blog-info">
-              <h3>🏃‍♂️ 4-Week Fitness Plan</h3>
-              <p>Beginner-friendly plan to build strength and consistency.</p>
-              <a href="https://www.muscleandfitness.com/workout-plan/workouts/workout-routines/complete-mf-beginners-training-guide-plan/#" target="_blank" class="button-link">Your 4 Week Starter Plan</a>
-            </div>
-          </div>
-          <div class="blog-card"> <!-- Resource Card 6: Mobility -->
-            <img src="resources-content/image6.png" alt="Mobility">
-            <div class="blog-info">
-              <h3>🤸 Mobility & Stretching</h3>
-              <p>Daily mobility routines and recovery video tutorials.</p>
-              <a href="https://www.bodyweightwarrior.co.uk/blog/full-body-mobility-25/" target="_blank" class="button-link">Checkout this Routine!</a>
-            </div>
-          </div>
-          <div class="blog-card"> <!-- Resource Card 7: Recipes -->
-            <img src="resources-content/image7.png" alt="Recipes">
-            <div class="blog-info">
-              <h3>🍽️ Healthy Recipes</h3>
-              <p>High-protein meals, smoothie guides, and snack ideas.</p>
-              <a href="https://www.bbcgoodfood.com/recipes/collection/healthy-recipes" target="_blank" class="button-link">Download the Best Recipes</a>
-            </div>
-          </div>
-          <div class="blog-card"> <!-- Resource Card 8: Monthly Challenges -->
-            <img src="resources-content/image8.png" alt="Challenge">
-            <div class="blog-info">
-              <h3>🏆 Monthly Challenges</h3>
-              <p>Push yourself with our latest fitness challenge and track your success.</p>
-              <a href="https://darebee.com/challenges.html" target="_blank" class="button-link">The Best Monthly Challenges</a>
-            </div>
-          </div>
-          <div class="blog-card"> <!-- Resource Card 9: Trackers -->
-            <img src="resources-content/image9.png" alt="Trackers">
-            <div class="blog-info">
-              <h3>📊 Progress Trackers</h3>
-              <p>Downloadable templates to log workouts, goals, and habits.</p>
-              <a href="https://www.mapmyfitness.com" target="_blank" class="button-link">Track your Results and Progress</a>
-            </div>
-          </div>
-          <div class="blog-card"> <!-- Resource Card 10: Contact & Support -->
-            <img src="resources-content/image10.png" alt="Support">
-            <div class="blog-info">
-              <h3>📞 Contact & Support</h3>
-              <p>Need help or want to request a custom plan? Reach out here.</p>
-                <a href="https://www.leisurecentre.com/geoff-moulder-leisure-complex/memberships/?utm_source=google&utm_medium=cpc&utm_campaign=ppc_brand&utm_content=ongoing-jan-2023&utm_term=geoff%20moulder%20leisure%20complex&gad_source=1&gad_campaignid=22257678411&gbraid=0AAAAACf4fAXQD5JFMd7Y1-gZ8uObdOFuS&gclid=CjwKCAjwruXBBhArEiwACBRtHerT0b1vWcZHhWP3yKLal75v-9qPTCEetlrckMrakzvT5nxVbE6QaBoCjp0QAvD_BwE" target="_blank" class="button-link">📞Membership support</a> 
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="blog"> <!-- Blog section showcasing latest articles -->
-      <div class="blog-styles"> <!-- Container for blog styling and layout -->
-        <h2 style="color: black;">Blog</h2> <!-- Section heading -->
-        <div class="blog-content"> <!-- Wrapper for blog cards -->
-          <div class="blog-card"> <!-- Blog Card 1: Sustainable Body Transformation -->
-            <img src="blog-content/blog-1.jpeg" alt="Blog-1"> <!-- Blog image -->
-            <div class="blog-info"> <!-- Blog text content -->
-              <h3>How to achieve a sustainable body transformation</h3> <!-- Blog title -->
-              <p class="date">May 2025</p> <!-- Publication date -->
-              <p>Our staff includes world-class trainers and specialists dedicated to your success.</p> <!-- Blog description -->
-              <a href="https://thecutgym.com/how-to-achieve-a-sustainable-body-transformation/" target="_blank" class="button-link">Take Me There</a> <!-- External blog link -->
-            </div>
-          </div>
-          <div class="blog-card"> <!-- Blog Card 2: Training Tips -->
-            <img src="blog-content/blog-2.jpeg" alt="Blog-2"> <!-- Blog image -->
-            <div class="blog-info"> <!-- Blog text content -->
-              <h3>Training Tips</h3> <!-- Blog title -->
-              <p class="date">April 2025</p> <!-- Publication date -->
-              <p>Discover the most effective training techniques used by our professional coaches.</p> <!-- Blog description -->
-              <a href="https://www.fitnessfirst.co.uk/blog/the-ultimate-beginners-guide-to-the-gym" target="_blank" class="button-link">Take Me There</a> <!-- External blog link -->
-            </div>
-          </div>
-          <div class="blog-card"> <!-- Blog Card 3: Nutrition Advice -->
-            <img src="blog-content/blog-3.jpeg" alt="Blog-3"> <!-- Blog image -->
-            <div class="blog-info"> <!-- Blog text content -->
-              <h3>Nutrition Advice</h3> <!-- Blog title -->
-              <p class="date">March 2025</p> <!-- Publication date -->
-              <p>Get nutritional guidance tailored to fitness and recovery, from certified experts.</p> <!-- Blog description -->
-              <a href="https://www.healthnutritionist.co.uk/post/why-nutrition-is-essential-to-maintaining-healthy-skin-as-you-age" target="_blank" class="button-link">Take Me There</a> <!-- External blog link -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
- 
-    <section id="events"> <!-- Events section showcasing partner fitness competitions -->
-      <h2>Events</h2> <!-- Section heading -->
-      <p>We are excited to present these challenging yet rewarding events through our partners ULTRA X, HYROX and 220 TRIATHLON.</p> <!-- Introductory paragraph -->
-      <p>These events are designed to push your limits, enhance your fitness, and provide a platform for you to showcase your hard work and dedication!</p>
-        <div class="event-widgets-container"> <!-- Container holding all event widgets -->
-
-          <details class="event-widget first-event"> <!-- Event Widget: HYROX -->
-            <summary class="event-summary"> <!-- Summary with video preview -->
-              <video autoplay muted loop playsinline class="widget-video-preview"> <!-- HYROX preview video -->
-                <source src="events-front-content/hyrox.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-              </video>
-            </summary>
-            <div class="event-widget-content"> <!-- Content shown when expanded -->
-              <button class="close-widget">Close</button> <!-- Close button -->
-              <div class="event-description"> <!-- HYROX event description -->
-                <h2 style="color: rgb(252, 232, 7);">Hyrox Championships</h2>
-                <p style="color: white;">
-                  HYROX is the world’s first fitness race for every body — 
-                  combining functional strength training with endurance in a competitive indoor environment. 
-                  Whether you're a first-time racer or a seasoned athlete, HYROX challenges you to test your limits on a global stage.
-                </p>
-              </div>
-              <div class="event-features"> <!-- Key features of HYROX -->
-                <div class="event-feature-box feature-first">
-                  <h2 style="color: rgb(252, 232, 7);">Lift. Run. Dominate.</h2>
-                  <p style="color: white;">Each HYROX event features standardized workouts across 8 functional fitness stations, 
-                    including sled pushes, rowing, wall balls, and more — giving athletes a true test of strength and stamina in a head-to-head format.</p>
-                </div>
-                <div class="event-feature-box feature-first">
-                  <h2 style="color: rgb(252, 232, 7);">Power Meets Endurance</h2>
-                  <p style="color: white;">What makes HYROX unique is its accessibility. 
-                    The event structure is designed to accommodate all levels, offering solo, doubles, and relay divisions. 
-                    Train hard, compete fair, and feel the electrifying energy of thousands pushing together.</p>
-                </div>
-                <div class="event-feature-box feature-first">
-                  <h2 style="color: rgb(252, 232, 7);">The Ultimate Fitness Race</h2>
-                  <p style="color: white;">HYROX isn't just a race — it’s a movement. 
-                    With a global community of fitness enthusiasts, live DJ events, and elite athlete heats, the experience delivers adrenaline and achievement in equal measure. 
-                    This is fitness racing, redefined.</p>
-                </div>
-              </div>
-              <div class="event-image-grid"> <!-- HYROX event locations with links -->
-                <div class="event-image-container">
-                  <a href="https://hyrox.com/event/f45-hyrox-new-york/" target="_blank">
-                    <img src="hyrox-widget-events/image-1.png" alt="New York Event">
-                  </a>
-                </div>
-                <div class="event-image-container">
-                  <a href="https://hyrox.com/event/hyrox-cardiff/" target="_blank">
-                    <img src="hyrox-widget-events/image-2.png" alt="Cardiff Event">
-                  </a>
-                </div>
-                <div class="event-image-container">
-                  <a href="https://hyrox.com/event/hyrox-paris/" target="_blank">
-                    <img src="hyrox-widget-events/image-3.png" alt="Paris Event">
-                  </a>
-                </div>
-                <div class="event-image-container">
-                  <a href="https://hyrox.com/event/hyrox-beijing/" target="_blank">
-                    <img src="hyrox-widget-events/image-4.png" alt="Bejing Event">
-                  </a>
-                </div>
-              </div>
-            </div>
-          </details>
-
-          <details class="event-widget second-event"> <!-- Event Widget: Ultra X -->
-            <summary class="event-summary">
-              <video autoplay muted loop playsinline class="widget-video-preview"> <!-- Ultra X preview video -->
-                <source src="events-front-content/ultrax.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-              </video>
-            </summary>
-            <div class="event-widget-content"> <!-- Content shown when expanded -->
-              <button class="close-widget">Close</button>
-              <div class="event-description"> <!-- Ultra X event description -->
-                <h2 style="color: rgb(19, 7, 252);">Ultra X Championships</h2>
-                <p style="color: rgb(0, 0, 0);">
-                  Ultra X is the ultimate test of endurance — 
-                  a global series of multi-stage ultra marathons set in some of the most breathtaking and challenging environments on Earth. 
-                  From the deserts of Jordan to the jungles of Sri Lanka, these races push runners beyond the ordinary.
-                </p>
-              </div>
-              <div class="event-features"> <!-- Key features of Ultra X -->
-                <div class="event-feature-box feature-second">
-                  <h2 style="color: rgb(19, 7, 252);">Race Across the World’s Wildest Landscapes</h2>
-                  <p style="color: rgb(0, 0, 0);">Each Ultra X race spans 2 to 5 days, covering up to 250km of remote terrain. 
-                    Runners complete a set distance each day, often camping overnight at race villages.
-                    It’s more than a race — it’s an immersive adventure in resilience and mental strength.</p>
-                </div>
-                <div class="event-feature-box feature-second">
-                  <h2 style="color: rgb(19, 7, 252);">Where the Brave Push Boundaries</h2>
-                  <p style="color: rgb(0, 0, 0);">Whether you’re an experienced ultra runner or chasing your first multi-day finish, 
-                    Ultra X welcomes all levels. With options to run solo or in teams, the events are built to challenge you — 
-                    but also to support you every step of the way.</p>
-                </div>
-                <div class="event-feature-box feature-second">
-                  <h2 style="color: rgb(19, 7, 252);">Endurance Redefined</h2>
-                  <p style="color: rgb(0, 0, 0);">Ultra X is more than a finish line. It’s a global community of explorers, united by grit and a love for pushing boundaries. 
-                    With international participants, stunning backdrops, and unforgettable camaraderie, it’s an experience that redefines what you're capable of.</p>
-                </div>
-              </div>
-              <div class="event-image-grid"> <!-- Ultra X event locations with links -->
-                <div class="event-image-container">
-                  <a href="https://ultra-x.co/finland/" target="_blank">
-                    <img src="ultra-x-widget-events/image-1.png" alt="Finland Event">
-                  </a>
-                </div>
-                <div class="event-image-container">
-                  <a href="https://ultra-x.co/wales/" target="_blank">
-                    <img src="ultra-x-widget-events/image-2.png" alt="Wales Event">
-                  </a>
-                </div>
-                <div class="event-image-container">
-                  <a href="https://ultra-x.co/jordan/" target="_blank">
-                    <img src="ultra-x-widget-events/image-3.png" alt="Jordan Event">
-                  </a>
-                </div>
-                <div class="event-image-container">
-                  <a href="https://ultra-x.co/nevada/" target="_blank">
-                    <img src="ultra-x-widget-events/image-4.png" alt="Nevada Event">
-                  </a>
-                </div>
-              </div>
-            </div>
-          </details>
-
-          <details class="event-widget third-event"> <!-- Event Widget: 220 Triathlon -->
-            <summary class="event-summary">
-              <video autoplay muted loop playsinline class="widget-video-preview"> <!-- 220 Triathlon preview video -->
-                <source src="events-front-content/220-trii.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-              </video>
-            </summary>
-            <div class="event-widget-content"> <!-- Content shown when expanded -->
-              <button class="close-widget">Close</button>
-              <div class="event-description"> <!-- 220 Triathlon event description -->
-                <h2 style="color: #820e0e;">220 Triathlon World Championships</h2>
-                <p style="color: rgb(255, 255, 255);">
-                  220 Triathlon is the go-to platform for triathletes of all levels — from first-timers to elite competitors. 
-                  As the UK's leading triathlon magazine and media brand, 220 brings the best of training insights, gear reviews, 
-                  race coverage, and expert advice to help you reach your multisport goals.
-                </p>
-              </div>
-              <div class="event-features"> <!-- Key features of 220 Triathlon -->
-                <div class="event-feature-box feature-third">
-                  <h2 style="color: rgb(0, 0, 0);">Push Past the Limits. Be 220.</h2>
-                  <p style="color: rgb(255, 255, 255);">Whether you're fine-tuning your swim stroke, climbing hills on the bike, 
-                    or shaving seconds off your 10K split, 220 Triathlon equips you with cutting-edge training plans and performance tips from world-class coaches and athletes. 
-                    It’s your ultimate resource to race smarter and stronger.
-                  </p>
-                </div>
-                <div class="event-feature-box feature-third">
-                  <h2 style="color: rgb(0, 0, 0);">Swim. Bike. Run. Conquer.</h2>
-                  <p style="color: rgb(255, 255, 255);">From wetsuits to carbon bikes, running shoes to smartwatches — if it matters to a triathlete, 220 has tested it. 
-                    With in-depth gear reviews, comparison guides, and buying advice, you’ll have all the tools needed to invest in the right kit with confidence.
-                  </p>
-                </div>
-                <div class="event-feature-box feature-third">
-                  <h2 style="color: rgb(0, 0, 0);">Train Hard. Race Harder.</h2>
-                  <p style="color: rgb(255, 255, 255);">More than just a magazine, 220 Triathlon is a thriving community of multisport athletes united by the drive to push limits. 
-                    With coverage of the UK's biggest triathlon events, interviews with inspirational racers, and a strong presence online, 220 connects you to the heart of the sport.</p>
-                </div>
-              </div>
-              <div class="event-image-grid"> <!-- 220 Triathlon event locations with links -->
-                <div class="event-image-container">
-                  <a href="https://findarace.com/triathlons/olympic" target="_blank">
-                    <img src="220-widget-events/image-1.png" alt="Olympic Event">
-                  </a>
-                </div>
-                <div class="event-image-container">
-                  <a href="https://findarace.com/triathlons/middle-distance" target="_blank">
-                    <img src="220-widget-events/image-2.png" alt="Middle-distance Event">
-                  </a>
-                </div>
-                <div class="event-image-container">
-                  <a href="https://findarace.com/triathlons/sprint" target="_blank">
-                    <img src="220-widget-events/image-3.png" alt="Sprint Event">
-                  </a>
-                </div>
-                <div class="event-image-container">
-                  <a href="https://findarace.com/triathlons/iron-distance" target="_blank">
-                    <img src="220-widget-events/image-4.png" alt="Iron-man Event">
-                  </a>
-                </div>
-              </div>
-            </div>
-          </details>
-        </div>
-    </section>
-  </main> <!-- End of main content -->
-
-  <footer> <!-- Main footer section -->
-    <div class="footer-container"> <!-- Wrapper for all footer content -->
-      <div class="footer-consultation"> <!-- Consultation form block -->
-        <h2>Book a Design Consultation</h2>
-        <p>Virtual or in person...</p>
-        <form class="consultation-form"> <!-- Design consultation form -->
-          <input type="text" placeholder="Name*" required> <!-- Name input -->
-          <input type="email" placeholder="Email*" required> <!-- Email input -->
-          <input type="tel" placeholder="Telephone*" required> <!-- Phone number input -->
-          <div class="consent"> <!-- Optional newsletter sign-up -->
-            <input type="checkbox" id="consent">
-            <label for="consent">Sign me up for updates.</label>
-          </div>
-          <button type="submit">Submit</button> <!-- Submit button -->
-        </form>
-      </div>
-      <div class="footer-section newsletter"> <!-- Newsletter signup section -->
-        <h2>Join Our Newsletter</h2>
-        <p>Stay updated on the latest offers and equipment.</p>
-        <form class="newsletter-form"> <!-- Newsletter form -->
-          <input type="email" placeholder="Enter your email" required> <!-- Email input -->
-          <button type="submit">Subscribe</button> <!-- Subscribe button -->
-        </form>
-      </div>
-      <div class="footer-columns"> <!-- Footer columns layout -->
-        <div class="footer-section about"> <!-- About Us column -->
-          <h2>About Us</h2>
-          <p>Virtus Group is a future-focused fitness community dedicated to innovation, 
-            performance, and wellbeing. From AI-powered training to expert coaching and 
-            immersive virtual programs, we empower every member to reach their full potential — body and mind.
-          </p>
-        </div>
-        <div class="footer-section links"> <!-- Quick Links column -->
-          <h2>Quick Links</h2>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#trainers">Trainers</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#resources">Membership Login</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-section contact"> <!-- Contact information column -->
-          <h2>Contact</h2>
-          <p>Email: VirtusGroupGyms@gmail.com</p>
-          <p>Phone: 01834 567254</p>
-          <p>Location: Geoff Moulder Leisure Complex
-                          Rowley Rd, Boston PE21 6JE  
-          </p>
-        </div>
-      </div> <!-- /footer-columns -->
-    </div> <!-- /footer-container -->
-    <div class="footer-bottom"> <!-- Footer bottom bar with legal links -->
-      <p>&copy; 2025 VirtusGroup Limited. All rights reserved. <br>
-        <a href="documents/Virtus-group-Operations-overview.docx" download class="footer-download-btn">Terms & Conditions</a> |
-        <a href="documents/Virtus_Group_Privacy_Policy.pptx" download class="footer-download-btn">Privacy Policy</a> |
-        <a href="documents/Virtus_Group_Cookies_Policy.pptx" download class="footer-download-btn">Cookies</a> |
-          Web Design: George Baldwin
-      </p>
-    </div>
-    <div class="social-media"> <!-- Social media icons with links -->
+      <button class="book-btn">Book a Consultation</button>
+      <div class="dropdown-footer">
+        <img src="header-content/logo.png" alt="Virtus Logo">
+        <p>📞 0800 567 435 | ✉️ virtusgroup@gmail.com</p>
+        <p>📍 Rowley Rd, Boston PE21 6JE</p>
+         <div class="social-media"> <!-- Social media icons with links -->
       <a href="https://www.instagram.com/yourpage" target="_blank" rel="noopener">
         <img src="footer-content/instagram.png" alt="instagram">
       </a>
@@ -758,108 +50,55 @@
         <img src="footer-content/twitter.png" alt="twitter">
       </a>
     </div>
-    <Div class="footer-credits"> <!-- W3C CSS validation badge -->
-      <p>
-        <a href="https://jigsaw.w3.org/css-validator/check/referer">
-          <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!">
-        </a>
+        <p class="footer-legal">
+         <p>&copy; 2025 VirtusGroup Limited. All rights reserved. <br>
+        <a href="documents/Virtus-group-Operations-overview.docx" download class="footer-download-btn">Terms & Conditions</a> |
+        <a href="documents/Virtus_Group_Privacy_Policy.pptx" download class="footer-download-btn">Privacy Policy</a> |
+        <a href="documents/Virtus_Group_Cookies_Policy.pptx" download class="footer-download-btn">Cookies</a> |
+          Web Design: George Baldwin
       </p>
-    </Div>
-  </footer>
-     
- <script>
-    window.onload = function () {
-      // Scroll to the top of the page (header video section) when the page loads
-      window.scrollTo(0, 0);
+    </div>
+    </div>
+  </div>
 
-      // Adding smooth scroll with offset
-      const links = document.querySelectorAll('nav ul li a'); // Select all navigation links
-      links.forEach(link => {
-          link.addEventListener('click', function(e) {
-              e.preventDefault();  // Prevent the default link behavior
-              const targetId = this.getAttribute('href').substring(1);  // Get target section ID
-              const target = document.getElementById(targetId);  // Get the actual section element
-              
-              // Scroll to the target section with an offset to avoid the nav overlap
-              window.scrollTo({
-                  top: target.offsetTop - 80,  // Adjust offset based on your nav height
-                  behavior: 'smooth'  // Smooth scroll
-              });
-          });
-      });
-    };
 
-    // Function to unlock the widget and show the content
-    function unlockWidget() {
-      const username = document.getElementById('widgetUsername').value;
-      const password = document.getElementById('widgetPassword').value;
-      const errorMessage = document.getElementById('errorMessage');
+<!-- Modal Popup for Book a Consultation -->
+<div id="consultation-modal" class="modal-overlay">
+  <div class="modal-content">
+    <h2>Book a Design Consultation</h2>
+    <form id="consultation-form">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <textarea placeholder="What are your fitness goals?" rows="4" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <span class="close-modal">&times;</span>
+  </div>
+</div>
 
-      if (username === '1' && password === '2') { // Check hardcoded login credentials
-        document.getElementById('widgetContentProtected').style.display = 'block'; // Show protected content
-        document.getElementById('protectedWidget').style.display = 'none'; // Hide login area
-        errorMessage.textContent = ''; // Clear error if previously shown
-      } else {
-        errorMessage.textContent = 'Invalid credentials, please try again.'; // Show error
-      }
+  <script>
+    document.getElementById("menu-toggle").addEventListener("click", () => {
+      const panel = document.getElementById("dropdown-panel");
+      panel.classList.toggle("open");
+    });
+
+   const modal = document.getElementById("consultation-modal");
+  const openBtn = document.querySelector(".book-btn");
+  const closeBtn = document.querySelector(".close-modal");
+
+  openBtn.addEventListener("click", () => {
+    modal.style.display = "flex";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
     }
-
-    function closeWidget() {
-      document.getElementById('widgetContentProtected').style.display = 'none'; // Hide protected content
-      document.getElementById('protectedWidget').style.display = 'flex'; // Show login area again
-
-      // Clear input fields and error message
-      document.getElementById('widgetUsername').value = '';
-      document.getElementById('widgetPassword').value = '';
-      document.getElementById('errorMessage').textContent = '';
-    }
-
-    // Handle opening the Typeform when the button is clicked
-    function openTypeform() {
-      document.getElementById("typeform-container").style.display = "block"; // Show Typeform popup
-      document.getElementById("typeform-backdrop").style.display = "block"; // Show background overlay
-    }
-
-    function closeTypeform() {
-      document.getElementById("typeform-container").style.display = "none"; // Hide Typeform popup
-      document.getElementById("typeform-backdrop").style.display = "none"; // Hide background overlay
-    }
-
-    // Close button for Typeform
-    document.getElementById("closeTypeformButton").addEventListener("click", closeTypeform);
-
-    // Auto open Typeform after 10 seconds
-    window.addEventListener("load", function () {
-      setTimeout(openTypeform, 10000);
-    });
-
-    const openBtn = document.getElementById("open-modal"); // Button to open consultation modal
-    const modal = document.getElementById("consultation-modal"); // Consultation modal element
-    const closeBtn = document.querySelector(".close-modal"); // Close button in modal
-
-    openBtn.addEventListener("click", () => {
-      modal.style.display = "flex"; // Show consultation modal
-    });
-
-    closeBtn.addEventListener("click", () => {
-      modal.style.display = "none"; // Hide consultation modal
-    });
-
-    window.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.style.display = "none"; // Close modal if clicking outside it
-      }
-    });
-
-  
-
-    document.querySelectorAll('.close-widget').forEach(button => {
-      button.addEventListener('click', function () {
-        // Find the closest <details> parent and close it
-        const details = this.closest('details');
-        if (details) details.removeAttribute('open');
-      });
-    });
-</script>
+  });
+  </script>
 </body>
 </html>

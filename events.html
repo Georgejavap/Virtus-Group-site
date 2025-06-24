@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtus Group - Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header/Nav reused -->
+  <div class="top-banner">
+    <div class="header-info">
+      <img src="header-content/logo.png" alt="Virtus-Group-Logo">
+      <h1>Virtus Group</h1>
+      <nav aria-label="Main Navigation">
+        <ul class="top-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home.html">Our GYM</a></li>
+          <li><a href="membership.html">Memebership Infomation</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+    
+<main role="main"> <!-- Main content area starts here -->
+
+  <!-- Backdrop for modal (dims background when modal is active) -->
+    <div id="typeform-backdrop" style="display: none;"></div>
+    <!-- Container for embedded Typeform -->
+      <div id="typeform-container" style="display: none;">
+        <button id="closeTypeformButton">✕</button> <!-- Button to close the Typeform modal -->
+      <!-- Embedded Typeform iframe -->
+        <iframe 
+          src="https://virtusgroupgyms.fillout.com/gymmembership"
+          style="border: none;" 
+          allow="camera; microphone; autoplay; encrypted-media;"> 
+        </iframe> <!-- Allows embedded media and permissions -->
+      </div>
+<section id="events"> <!-- Events section showcasing partner fitness competitions -->
+      <h2>Events</h2> <!-- Section heading -->
+      <p>We are excited to present these challenging yet rewarding events through our partners ULTRA X, HYROX and 220 TRIATHLON.</p> <!-- Introductory paragraph -->
+      <p>These events are designed to push your limits, enhance your fitness, and provide a platform for you to showcase your hard work and dedication!</p>
+        <div class="event-widgets-container"> <!-- Container holding all event widgets -->
+
+          <details class="event-widget first-event"> <!-- Event Widget: HYROX -->
+            <summary class="event-summary"> <!-- Summary with video preview -->
+              <video autoplay muted loop playsinline class="widget-video-preview"> <!-- HYROX preview video -->
+                <source src="events-front-content/hyrox.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+            </summary>
+            <div class="event-widget-content"> <!-- Content shown when expanded -->
+              <button class="close-widget">Close</button> <!-- Close button -->
+              <div class="event-description"> <!-- HYROX event description -->
+                <h2 style="color: rgb(252, 232, 7);">Hyrox Championships</h2>
+                <p style="color: white;">
+                  HYROX is the world’s first fitness race for every body — 
+                  combining functional strength training with endurance in a competitive indoor environment. 
+                  Whether you're a first-time racer or a seasoned athlete, HYROX challenges you to test your limits on a global stage.
+                </p>
+              </div>
+              <div class="event-features"> <!-- Key features of HYROX -->
+                <div class="event-feature-box feature-first">
+                  <h2 style="color: rgb(252, 232, 7);">Lift. Run. Dominate.</h2>
+                  <p style="color: white;">Each HYROX event features standardized workouts across 8 functional fitness stations, 
+                    including sled pushes, rowing, wall balls, and more — giving athletes a true test of strength and stamina in a head-to-head format.</p>
+                </div>
+                <div class="event-feature-box feature-first">
+                  <h2 style="color: rgb(252, 232, 7);">Power Meets Endurance</h2>
+                  <p style="color: white;">What makes HYROX unique is its accessibility. 
+                    The event structure is designed to accommodate all levels, offering solo, doubles, and relay divisions. 
+                    Train hard, compete fair, and feel the electrifying energy of thousands pushing together.</p>
+                </div>
+                <div class="event-feature-box feature-first">
+                  <h2 style="color: rgb(252, 232, 7);">The Ultimate Fitness Race</h2>
+                  <p style="color: white;">HYROX isn't just a race — it’s a movement. 
+                    With a global community of fitness enthusiasts, live DJ events, and elite athlete heats, the experience delivers adrenaline and achievement in equal measure. 
+                    This is fitness racing, redefined.</p>
+                </div>
+              </div>
+              <div class="event-image-grid"> <!-- HYROX event locations with links -->
+                <div class="event-image-container">
+                  <a href="https://hyrox.com/event/f45-hyrox-new-york/" target="_blank">
+                    <img src="hyrox-widget-events/image-1.png" alt="New York Event">
+                  </a>
+                </div>
+                <div class="event-image-container">
+                  <a href="https://hyrox.com/event/hyrox-cardiff/" target="_blank">
+                    <img src="hyrox-widget-events/image-2.png" alt="Cardiff Event">
+                  </a>
+                </div>
+                <div class="event-image-container">
+                  <a href="https://hyrox.com/event/hyrox-paris/" target="_blank">
+                    <img src="hyrox-widget-events/image-3.png" alt="Paris Event">
+                  </a>
+                </div>
+                <div class="event-image-container">
+                  <a href="https://hyrox.com/event/hyrox-beijing/" target="_blank">
+                    <img src="hyrox-widget-events/image-4.png" alt="Bejing Event">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="event-widget second-event"> <!-- Event Widget: Ultra X -->
+            <summary class="event-summary">
+              <video autoplay muted loop playsinline class="widget-video-preview"> <!-- Ultra X preview video -->
+                <source src="events-front-content/ultrax.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+            </summary>
+            <div class="event-widget-content"> <!-- Content shown when expanded -->
+              <button class="close-widget">Close</button>
+              <div class="event-description"> <!-- Ultra X event description -->
+                <h2 style="color: rgb(19, 7, 252);">Ultra X Championships</h2>
+                <p style="color: rgb(0, 0, 0);">
+                  Ultra X is the ultimate test of endurance — 
+                  a global series of multi-stage ultra marathons set in some of the most breathtaking and challenging environments on Earth. 
+                  From the deserts of Jordan to the jungles of Sri Lanka, these races push runners beyond the ordinary.
+                </p>
+              </div>
+              <div class="event-features"> <!-- Key features of Ultra X -->
+                <div class="event-feature-box feature-second">
+                  <h2 style="color: rgb(19, 7, 252);">Race Across the World’s Wildest Landscapes</h2>
+                  <p style="color: rgb(0, 0, 0);">Each Ultra X race spans 2 to 5 days, covering up to 250km of remote terrain. 
+                    Runners complete a set distance each day, often camping overnight at race villages.
+                    It’s more than a race — it’s an immersive adventure in resilience and mental strength.</p>
+                </div>
+                <div class="event-feature-box feature-second">
+                  <h2 style="color: rgb(19, 7, 252);">Where the Brave Push Boundaries</h2>
+                  <p style="color: rgb(0, 0, 0);">Whether you’re an experienced ultra runner or chasing your first multi-day finish, 
+                    Ultra X welcomes all levels. With options to run solo or in teams, the events are built to challenge you — 
+                    but also to support you every step of the way.</p>
+                </div>
+                <div class="event-feature-box feature-second">
+                  <h2 style="color: rgb(19, 7, 252);">Endurance Redefined</h2>
+                  <p style="color: rgb(0, 0, 0);">Ultra X is more than a finish line. It’s a global community of explorers, united by grit and a love for pushing boundaries. 
+                    With international participants, stunning backdrops, and unforgettable camaraderie, it’s an experience that redefines what you're capable of.</p>
+                </div>
+              </div>
+              <div class="event-image-grid"> <!-- Ultra X event locations with links -->
+                <div class="event-image-container">
+                  <a href="https://ultra-x.co/finland/" target="_blank">
+                    <img src="ultra-x-widget-events/image-1.png" alt="Finland Event">
+                  </a>
+                </div>
+                <div class="event-image-container">
+                  <a href="https://ultra-x.co/wales/" target="_blank">
+                    <img src="ultra-x-widget-events/image-2.png" alt="Wales Event">
+                  </a>
+                </div>
+                <div class="event-image-container">
+                  <a href="https://ultra-x.co/jordan/" target="_blank">
+                    <img src="ultra-x-widget-events/image-3.png" alt="Jordan Event">
+                  </a>
+                </div>
+                <div class="event-image-container">
+                  <a href="https://ultra-x.co/nevada/" target="_blank">
+                    <img src="ultra-x-widget-events/image-4.png" alt="Nevada Event">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="event-widget third-event"> <!-- Event Widget: 220 Triathlon -->
+            <summary class="event-summary">
+              <video autoplay muted loop playsinline class="widget-video-preview"> <!-- 220 Triathlon preview video -->
+                <source src="events-front-content/220-trii.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+            </summary>
+            <div class="event-widget-content"> <!-- Content shown when expanded -->
+              <button class="close-widget">Close</button>
+              <div class="event-description"> <!-- 220 Triathlon event description -->
+                <h2 style="color: #820e0e;">220 Triathlon World Championships</h2>
+                <p style="color: rgb(255, 255, 255);">
+                  220 Triathlon is the go-to platform for triathletes of all levels — from first-timers to elite competitors. 
+                  As the UK's leading triathlon magazine and media brand, 220 brings the best of training insights, gear reviews, 
+                  race coverage, and expert advice to help you reach your multisport goals.
+                </p>
+              </div>
+              <div class="event-features"> <!-- Key features of 220 Triathlon -->
+                <div class="event-feature-box feature-third">
+                  <h2 style="color: rgb(0, 0, 0);">Push Past the Limits. Be 220.</h2>
+                  <p style="color: rgb(255, 255, 255);">Whether you're fine-tuning your swim stroke, climbing hills on the bike, 
+                    or shaving seconds off your 10K split, 220 Triathlon equips you with cutting-edge training plans and performance tips from world-class coaches and athletes. 
+                    It’s your ultimate resource to race smarter and stronger.
+                  </p>
+                </div>
+                <div class="event-feature-box feature-third">
+                  <h2 style="color: rgb(0, 0, 0);">Swim. Bike. Run. Conquer.</h2>
+                  <p style="color: rgb(255, 255, 255);">From wetsuits to carbon bikes, running shoes to smartwatches — if it matters to a triathlete, 220 has tested it. 
+                    With in-depth gear reviews, comparison guides, and buying advice, you’ll have all the tools needed to invest in the right kit with confidence.
+                  </p>
+                </div>
+                <div class="event-feature-box feature-third">
+                  <h2 style="color: rgb(0, 0, 0);">Train Hard. Race Harder.</h2>
+                  <p style="color: rgb(255, 255, 255);">More than just a magazine, 220 Triathlon is a thriving community of multisport athletes united by the drive to push limits. 
+                    With coverage of the UK's biggest triathlon events, interviews with inspirational racers, and a strong presence online, 220 connects you to the heart of the sport.</p>
+                </div>
+              </div>
+              <div class="event-image-grid"> <!-- 220 Triathlon event locations with links -->
+                <div class="event-image-container">
+                  <a href="https://findarace.com/triathlons/olympic" target="_blank">
+                    <img src="220-widget-events/image-1.png" alt="Olympic Event">
+                  </a>
+                </div>
+                <div class="event-image-container">
+                  <a href="https://findarace.com/triathlons/middle-distance" target="_blank">
+                    <img src="220-widget-events/image-2.png" alt="Middle-distance Event">
+                  </a>
+                </div>
+                <div class="event-image-container">
+                  <a href="https://findarace.com/triathlons/sprint" target="_blank">
+                    <img src="220-widget-events/image-3.png" alt="Sprint Event">
+                  </a>
+                </div>
+                <div class="event-image-container">
+                  <a href="https://findarace.com/triathlons/iron-distance" target="_blank">
+                    <img src="220-widget-events/image-4.png" alt="Iron-man Event">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+    </section>
+  </main> <!-- End of main content -->
+  <script src="main.js"></script> <!-- Link to external JavaScript file for interactivity -->
+  </body>
+  </html>

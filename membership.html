@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtus Group - Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header/Nav reused -->
+  <div class="top-banner">
+    <div class="header-info">
+      <img src="header-content/logo.png" alt="Virtus-Group-Logo">
+      <h1>Virtus Group</h1>
+      <nav aria-label="Main Navigation">
+        <ul class="top-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="home.html">Our GYM</a></li>
+          <li><a href="events.html">Events</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+<main role="main"> 
+    <!-- Backdrop for modal (dims background when modal is active) -->
+    <div id="typeform-backdrop" style="display: none;"></div>
+    <!-- Container for embedded Typeform -->
+      <div id="typeform-container" style="display: none;">
+        <button id="closeTypeformButton">✕</button> <!-- Button to close the Typeform modal -->
+      <!-- Embedded Typeform iframe -->
+        <iframe 
+          src="https://virtusgroupgyms.fillout.com/gymmembership"
+          style="border: none;" 
+          allow="camera; microphone; autoplay; encrypted-media;"> 
+        </iframe> <!-- Allows embedded media and permissions -->
+      </div>
+   <section id="resources"> <!-- Membership resources section -->
+        <!-- Protected Widget (covering the whole section) -->
+      <div class="protected-widget" id="protectedWidget"> <!-- Main protected section container -->
+        <video autoplay muted loop playsinline class="widget-video-protected desktop"> <!-- Desktop background video -->
+          <source src="resources-front-video/resources-background-landscape.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video autoplay muted loop playsinline class="widget-video-protected mobile"> <!-- Mobile background video -->
+          <source src="resources-front-video/resources-background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+          <!-- Login Form -->
+        <div class="login-form" id="loginForm"> <!-- Login form to unlock content -->
+          <h3>Login into your membership portal</h3>
+          <input type="text" id="widgetUsername" name="username" placeholder="Username"> <!-- Username field -->
+          <input type="password" id="widgetPassword" placeholder="Password"> <!-- Password field -->
+          <button onclick="unlockWidget()">Unlock</button> <!-- Unlock button triggers JS -->
+          <div id="errorMessage" class="error-message"></div> <!-- Display login errors -->
+        </div>
+      </div>
+      
+      <div class="widget-content-protected" id="widgetContentProtected" style="display: none;"> <!-- Hidden content shown after login -->
+        <div class="widget-header"> <!-- Header with unlock title and close option -->
+          <h3 style="color: white;">🔓 Your Membership</h3>
+          <button style="color: white;"    class="close-btn" onclick="closeWidget()">✖</button>
+        </div>
+        <p style="color: white;">This content is now unlocked. You can place secure downloads, staff tools, or private data here.</p>
+          
+        <div class="membership-sections blog-content"> <!-- Section containing membership resource cards -->
+          <div class="blog-card"> <!-- Resource Card 1: Nutrition Plans -->
+            <img src="resources-content/image1.png" alt="Nutrition-Plans">
+            <div class="blog-info">
+              <h3>🥗 Nutrition Plans</h3>
+              <p>Personalized meal plans, macro guides, and healthy recipes crafted by experts.</p>
+              <a href="https://www.nutrition.org.uk/media/rxldz0ol/bnf-s-7-day-meal-planner.pdf" target="_blank" class="button-link">View Plan</a>
+            </div>
+          </div>
+          <div class="blog-card"> <!-- Resource Card 2: Mental Wellbeing -->
+            <img src="resources-content/image2.png" alt="Mental-Wellbeing">
+            <div class="blog-info">
+              <h3>🧠 Mental Wellbeing</h3>
+              <p>Meditations, mindset journals, and wellness tools for mental clarity.</p>
+              <a href="https://open.spotify.com/episode/3bGt5wV2sOE96Y8dZDu4RW?si=UWckYOtlQe2mBo1sPpIGfw" target="_blank" class="button-link">Listen Now!</a>
+            </div>
+          </div>
+          <div class="blog-card"> <!-- Resource Card 3: Yoga & PT Schedule -->
+            <img src="resources-content/image3.png" alt="Yoga-&-PT">
+            <div class="blog-info">
+              <h3>🧘 Yoga & 🏋️‍♂️ PT Schedule</h3>
+              <p>Weekly class schedules and bookable PT sessions.</p>
+              <a href="https://www.puregym.com/gyms/boston/timetable/" target="_blank" class="button-link">Checkout the Classes!</a>
+            </div>
+          </div>
+          <div class="blog-card"> <!-- Resource Card 4: Gym Guide -->
+            <img src="resources-content/image4.png" alt="Gym-Guide">
+            <div class="blog-info">
+              <h3>📘 Gym Guide</h3>
+              <p>First time here? Start with our intro video and facility guide.</p>
+              <a href="https://www.muscleandstrength.com/workout-routines" target="_blank" class="button-link">Exceptional Gym Guides</a>
+            </div>
+          </div>
+          <div class="blog-card"> <!-- Resource Card 5: Fitness Plan -->
+            <img src="resources-content/image5.png" alt="Fitness-Plan">
+            <div class="blog-info">
+              <h3>🏃‍♂️ 4-Week Fitness Plan</h3>
+              <p>Beginner-friendly plan to build strength and consistency.</p>
+              <a href="https://www.muscleandfitness.com/workout-plan/workouts/workout-routines/complete-mf-beginners-training-guide-plan/#" target="_blank" class="button-link">Your 4 Week Starter Plan</a>
+            </div>
+          </div>
+          <div class="blog-card"> <!-- Resource Card 6: Mobility -->
+            <img src="resources-content/image6.png" alt="Mobility">
+            <div class="blog-info">
+              <h3>🤸 Mobility & Stretching</h3>
+              <p>Daily mobility routines and recovery video tutorials.</p>
+              <a href="https://www.bodyweightwarrior.co.uk/blog/full-body-mobility-25/" target="_blank" class="button-link">Checkout this Routine!</a>
+            </div>
+          </div>
+          <div class="blog-card"> <!-- Resource Card 7: Recipes -->
+            <img src="resources-content/image7.png" alt="Recipes">
+            <div class="blog-info">
+              <h3>🍽️ Healthy Recipes</h3>
+              <p>High-protein meals, smoothie guides, and snack ideas.</p>
+              <a href="https://www.bbcgoodfood.com/recipes/collection/healthy-recipes" target="_blank" class="button-link">Download the Best Recipes</a>
+            </div>
+          </div>
+          <div class="blog-card"> <!-- Resource Card 8: Monthly Challenges -->
+            <img src="resources-content/image8.png" alt="Challenge">
+            <div class="blog-info">
+              <h3>🏆 Monthly Challenges</h3>
+              <p>Push yourself with our latest fitness challenge and track your success.</p>
+              <a href="https://darebee.com/challenges.html" target="_blank" class="button-link">The Best Monthly Challenges</a>
+            </div>
+          </div>
+          <div class="blog-card"> <!-- Resource Card 9: Trackers -->
+            <img src="resources-content/image9.png" alt="Trackers">
+            <div class="blog-info">
+              <h3>📊 Progress Trackers</h3>
+              <p>Downloadable templates to log workouts, goals, and habits.</p>
+              <a href="https://www.mapmyfitness.com" target="_blank" class="button-link">Track your Results and Progress</a>
+            </div>
+          </div>
+          <div class="blog-card"> <!-- Resource Card 10: Contact & Support -->
+            <img src="resources-content/image10.png" alt="Support">
+            <div class="blog-info">
+              <h3>📞 Contact & Support</h3>
+              <p>Need help or want to request a custom plan? Reach out here.</p>
+                <a href="https://www.leisurecentre.com/geoff-moulder-leisure-complex/memberships/?utm_source=google&utm_medium=cpc&utm_campaign=ppc_brand&utm_content=ongoing-jan-2023&utm_term=geoff%20moulder%20leisure%20complex&gad_source=1&gad_campaignid=22257678411&gbraid=0AAAAACf4fAXQD5JFMd7Y1-gZ8uObdOFuS&gclid=CjwKCAjwruXBBhArEiwACBRtHerT0b1vWcZHhWP3yKLal75v-9qPTCEetlrckMrakzvT5nxVbE6QaBoCjp0QAvD_BwE" target="_blank" class="button-link">📞Membership support</a> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog"> <!-- Blog section showcasing latest articles -->
+      <div class="blog-styles"> <!-- Container for blog styling and layout -->
+        <h2 style="color: black;">Blog</h2> <!-- Section heading -->
+        <div class="blog-content"> <!-- Wrapper for blog cards -->
+          <div class="blog-card"> <!-- Blog Card 1: Sustainable Body Transformation -->
+            <img src="blog-content/blog-1.jpeg" alt="Blog-1"> <!-- Blog image -->
+            <div class="blog-info"> <!-- Blog text content -->
+              <h3>How to achieve a sustainable body transformation</h3> <!-- Blog title -->
+              <p class="date">May 2025</p> <!-- Publication date -->
+              <p>Our staff includes world-class trainers and specialists dedicated to your success.</p> <!-- Blog description -->
+              <a href="https://thecutgym.com/how-to-achieve-a-sustainable-body-transformation/" target="_blank" class="button-link">Take Me There</a> <!-- External blog link -->
+            </div>
+          </div>
+          <div class="blog-card"> <!-- Blog Card 2: Training Tips -->
+            <img src="blog-content/blog-2.jpeg" alt="Blog-2"> <!-- Blog image -->
+            <div class="blog-info"> <!-- Blog text content -->
+              <h3>Training Tips</h3> <!-- Blog title -->
+              <p class="date">April 2025</p> <!-- Publication date -->
+              <p>Discover the most effective training techniques used by our professional coaches.</p> <!-- Blog description -->
+              <a href="https://www.fitnessfirst.co.uk/blog/the-ultimate-beginners-guide-to-the-gym" target="_blank" class="button-link">Take Me There</a> <!-- External blog link -->
+            </div>
+          </div>
+          <div class="blog-card"> <!-- Blog Card 3: Nutrition Advice -->
+            <img src="blog-content/blog-3.jpeg" alt="Blog-3"> <!-- Blog image -->
+            <div class="blog-info"> <!-- Blog text content -->
+              <h3>Nutrition Advice</h3> <!-- Blog title -->
+              <p class="date">March 2025</p> <!-- Publication date -->
+              <p>Get nutritional guidance tailored to fitness and recovery, from certified experts.</p> <!-- Blog description -->
+              <a href="https://www.healthnutritionist.co.uk/post/why-nutrition-is-essential-to-maintaining-healthy-skin-as-you-age" target="_blank" class="button-link">Take Me There</a> <!-- External blog link -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+       <section id="trainers" class="angled-section"> <!-- Section showcasing personal trainers; styled with angled background -->
+      <div class="angled-content"> <!-- Wrapper for angled layout content -->
+        <div class="left-text"> <!-- Left side containing text content -->
+          <h2 style="color: blue;">Meet Our Expert Team</h2> <!-- Heading introducing the trainers -->
+          <p>Our staff includes world-class trainers and specialists dedicated to your success. Each member brings unique skills and experience to help you meet your goals.</p> <!-- Brief description -->
+          <button id="open-modal">BOOK A DESIGN CONSULTATION</button> <!-- Button to trigger modal for booking -->
+        </div>
+        <div class="right-image"></div> <!-- Right side (likely styled with background image in CSS) -->
+      </div>
+    </section>
+    <!-- Modal Popup for Design Consultation -->
+    <div id="consultation-modal" class="modal-overlay"> <!-- Modal overlay background -->
+      <div class="modal-content"> <!-- Modal dialog box -->
+        <h2>Book a Design Consultation</h2> <!-- Modal heading -->
+          <form id="consultation-form"> <!-- Consultation booking form -->
+            <input type="text" placeholder="Full Name" required> <!-- User full name input -->
+            <input type="email" placeholder="Email Address" required> <!-- User email input -->
+            <textarea placeholder="What are your fitness goals?" rows="4" required></textarea> <!-- Text area for goals -->
+            <button type="submit">Submit</button> <!-- Submit button -->
+          </form>
+        <span class="close-modal">&times;</span> <!-- 'X' icon to close the modal -->
+      </div>
+    </div>
+</main>
+  <footer> <!-- Main footer section -->
+    <div class="footer-container"> <!-- Wrapper for all footer content -->
+      <div class="footer-consultation"> <!-- Consultation form block -->
+        <h2>Book a Design Consultation</h2>
+        <p>Virtual or in person...</p>
+        <form class="consultation-form"> <!-- Design consultation form -->
+          <input type="text" placeholder="Name*" required> <!-- Name input -->
+          <input type="email" placeholder="Email*" required> <!-- Email input -->
+          <input type="tel" placeholder="Telephone*" required> <!-- Phone number input -->
+          <div class="consent"> <!-- Optional newsletter sign-up -->
+            <input type="checkbox" id="consent">
+            <label for="consent">Sign me up for updates.</label>
+          </div>
+          <button type="submit">Submit</button> <!-- Submit button -->
+        </form>
+      </div>
+      <div class="footer-section newsletter"> <!-- Newsletter signup section -->
+        <h2>Join Our Newsletter</h2>
+        <p>Stay updated on the latest offers and equipment.</p>
+        <form class="newsletter-form"> <!-- Newsletter form -->
+          <input type="email" placeholder="Enter your email" required> <!-- Email input -->
+          <button type="submit">Subscribe</button> <!-- Subscribe button -->
+        </form>
+      </div>
+      <div class="footer-columns"> <!-- Footer columns layout -->
+        <div class="footer-section about"> <!-- About Us column -->
+          <h2>About Us</h2>
+          <p>Virtus Group is a future-focused fitness community dedicated to innovation, 
+            performance, and wellbeing. From AI-powered training to expert coaching and 
+            immersive virtual programs, we empower every member to reach their full potential — body and mind.
+          </p>
+        </div>
+        <div class="footer-section links"> <!-- Quick Links column -->
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#trainers">Trainers</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#resources">Membership Login</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section contact"> <!-- Contact information column -->
+          <h2>Contact</h2>
+          <p>Email: VirtusGroupGyms@gmail.com</p>
+          <p>Phone: 01834 567254</p>
+          <p>Location: Geoff Moulder Leisure Complex
+                          Rowley Rd, Boston PE21 6JE  
+          </p>
+        </div>
+      </div> <!-- /footer-columns -->
+    </div> <!-- /footer-container -->
+    <div class="footer-bottom"> <!-- Footer bottom bar with legal links -->
+      <p>&copy; 2025 VirtusGroup Limited. All rights reserved. <br>
+        <a href="documents/Virtus-group-Operations-overview.docx" download class="footer-download-btn">Terms & Conditions</a> |
+        <a href="documents/Virtus_Group_Privacy_Policy.pptx" download class="footer-download-btn">Privacy Policy</a> |
+        <a href="documents/Virtus_Group_Cookies_Policy.pptx" download class="footer-download-btn">Cookies</a> |
+          Web Design: George Baldwin
+      </p>
+    </div>
+    <div class="social-media"> <!-- Social media icons with links -->
+      <a href="https://www.instagram.com/yourpage" target="_blank" rel="noopener">
+        <img src="footer-content/instagram.png" alt="instagram">
+      </a>
+      <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener">
+        <img src="footer-content/facebook.png" alt="facebook">
+      </a>
+      <a href="https://www.twitter.com/yourpage" target="_blank" rel="noopener">
+        <img src="footer-content/twitter.png" alt="twitter">
+      </a>
+    </div>
+    <Div class="footer-credits"> <!-- W3C CSS validation badge -->
+      <p>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+          <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!">
+        </a>
+      </p>
+    </Div>
+  </footer>
+  <script src="main.js"></script> <!-- Link to external JavaScript file for interactivity -->
+</body>
+</html>
