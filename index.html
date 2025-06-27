@@ -1,104 +1,144 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Virtus Group</title>
-  <link rel="stylesheet" href="index.styles.css">
+  <link rel="stylesheet" href="index.styles.css" />
 </head>
 <body>
+
   <!-- Welcome screen -->
   <div class="welcome-screen"></div>
 
   <!-- Background video -->
   <div class="video-background">
     <video class="video-desktop" autoplay muted loop playsinline>
-      <source src="header-content/0623.mp4" type="video/mp4">
+      <source src="header-content/0623.mp4" type="video/mp4" />
     </video>
-    <video class="video-mobile" autoplay  loop playsinline>
-      <source src="header-content/portrait-background-video.mp4" type="video/mp4">
+    <video class="video-mobile" autoplay loop playsinline>
+      <source src="header-content/portrait-background-video.mp4" type="video/mp4" />
     </video>
   </div>
 
   <!-- Dropdown Trigger -->
-  <button id="menu-toggle" class="dropdown-trigger">▼ MENU</button>
+  <button 
+    id="menu-toggle" 
+    class="dropdown-trigger" 
+    aria-label="Toggle main menu" 
+    aria-controls="dropdown-panel" 
+    aria-expanded="false"
+  >
+    ▼ MENU
+  </button>
 
   <!-- Animated Dropdown Panel -->
-  <div id="dropdown-panel" class="dropdown-panel">
+  <div 
+    id="dropdown-panel" 
+    class="dropdown-panel" 
+    role="region" 
+    aria-label="Main navigation panel"
+  >
     <div class="panel-content">
-      <h1>Virtus Group</h1>
-      <nav>
+      <h1 id="site-title">Virtus Group</h1>
+      <nav aria-label="Main navigation">
         <ul>
           <li><a href="home.html">Our Gym</a></li>
           <li><a href="membership.html">Membership Info</a></li>
           <li><a href="events.html">Events</a></li>
         </ul>
       </nav>
-      <button class="book-btn">Book a Consultation</button>
-      <div class="dropdown-footer">
-        <img src="header-content/logo.png" alt="Virtus Logo">
+      <button 
+        class="book-btn" 
+        aria-label="Open consultation booking form"
+        aria-controls="consultation-modal"
+      >
+        Book a Consultation
+      </button>
+      <div class="dropdown-footer" aria-label="Contact and social information">
+        <img src="header-content/logo.png" alt="Virtus Logo" />
         <p>📞 0800 567 435 | ✉️ virtusgroup@gmail.com</p>
         <p>📍 Rowley Rd, Boston PE21 6JE</p>
-         <div class="social-media"> <!-- Social media icons with links -->
-      <a href="https://www.instagram.com/yourpage" target="_blank" rel="noopener">
-        <img src="footer-content/instagram.png" alt="instagram">
-      </a>
-      <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener">
-        <img src="footer-content/facebook.png" alt="facebook">
-      </a>
-      <a href="https://www.twitter.com/yourpage" target="_blank" rel="noopener">
-        <img src="footer-content/twitter.png" alt="twitter">
-      </a>
-    </div>
+        <div class="social-media">
+          <a href="https://www.instagram.com/yourpage" target="_blank" rel="noopener">
+            <img src="footer-content/instagram.png" alt="Instagram" />
+          </a>
+          <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener">
+            <img src="footer-content/facebook.png" alt="Facebook" />
+          </a>
+          <a href="https://www.twitter.com/yourpage" target="_blank" rel="noopener">
+            <img src="footer-content/twitter.png" alt="Twitter" />
+          </a>
+        </div>
         <p class="footer-legal">
-         <p>&copy; 2025 VirtusGroup Limited. All rights reserved. <br>
-        <a href="documents/Virtus-group-Operations-overview.docx" download class="footer-download-btn">Terms & Conditions</a> |
-        <a href="documents/Virtus_Group_Privacy_Policy.pptx" download class="footer-download-btn">Privacy Policy</a> |
-        <a href="documents/Virtus_Group_Cookies_Policy.pptx" download class="footer-download-btn">Cookies</a> |
+          &copy; 2025 VirtusGroup Limited. All rights reserved. <br />
+          <a href="documents/Virtus-group-Operations-overview.docx" download class="footer-download-btn">Terms & Conditions</a> |
+          <a href="documents/Virtus_Group_Privacy_Policy.pptx" download class="footer-download-btn">Privacy Policy</a> |
+          <a href="documents/Virtus_Group_Cookies_Policy.pptx" download class="footer-download-btn">Cookies</a> |
           Web Design: George Baldwin
-      </p>
-    </div>
+        </p>
+      </div>
     </div>
   </div>
 
-
-<!-- Modal Popup for Book a Consultation -->
-<div id="consultation-modal" class="modal-overlay">
-  <div class="modal-content">
-    <h2>Book a Design Consultation</h2>
-    <form id="consultation-form">
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email Address" required>
-      <textarea placeholder="What are your fitness goals?" rows="4" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
-    <span class="close-modal">&times;</span>
+  <!-- Modal Popup for Book a Consultation -->
+  <div 
+    id="consultation-modal" 
+    class="modal-overlay" 
+    role="dialog" 
+    aria-modal="true" 
+    aria-labelledby="consultation-title" 
+    aria-describedby="consultation-desc"
+  >
+    <div class="modal-content">
+      <h2 id="consultation-title">Book a Design Consultation</h2>
+      <p id="consultation-desc" class="sr-only">Fill in your name, email and fitness goals to book a consultation</p>
+      <form id="consultation-form">
+        <input type="text" placeholder="Full Name" required aria-label="Full Name" />
+        <input type="email" placeholder="Email Address" required aria-label="Email Address" />
+        <textarea placeholder="What are your fitness goals?" rows="4" required aria-label="Your fitness goals"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <span class="close-modal" aria-label="Close consultation modal" role="button" tabindex="0">&times;</span>
+    </div>
   </div>
-</div>
 
   <script>
-    document.getElementById("menu-toggle").addEventListener("click", () => {
-      const panel = document.getElementById("dropdown-panel");
-      panel.classList.toggle("open");
+    // Dropdown toggle
+    const menuToggle = document.getElementById("menu-toggle");
+    const dropdownPanel = document.getElementById("dropdown-panel");
+    menuToggle.addEventListener("click", () => {
+      const isOpen = dropdownPanel.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", isOpen);
     });
 
-   const modal = document.getElementById("consultation-modal");
-  const openBtn = document.querySelector(".book-btn");
-  const closeBtn = document.querySelector(".close-modal");
+    // Modal logic
+    const modal = document.getElementById("consultation-modal");
+    const openBtn = document.querySelector(".book-btn");
+    const closeBtn = document.querySelector(".close-modal");
 
-  openBtn.addEventListener("click", () => {
-    modal.style.display = "flex";
-  });
+    openBtn.addEventListener("click", () => {
+      modal.style.display = "flex";
+    });
 
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
-
-  window.addEventListener("click", (e) => {
-    if (e.target === modal) {
+    closeBtn.addEventListener("click", () => {
       modal.style.display = "none";
-    }
-  });
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+
+    // Accessibility: allow keyboard closing of modal
+    closeBtn.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        modal.style.display = "none";
+      }
+    });
   </script>
 </body>
 </html>
+
+

@@ -8,7 +8,7 @@
 </head>
 <body>
   <!-- Header/Nav reused -->
-  <div class="top-banner">
+  <div class="top-banner" role="banner" aria-label="Site Header">
     <div class="header-info">
       <img src="header-content/logo.png" alt="Virtus-Group-Logo">
       <h1>Virtus Group</h1>
@@ -22,366 +22,386 @@
     </div>
   </div>
 
+
     
-<main role="main">  <!-- Main content area starts here -->
-    <!-- Backdrop for modal (dims background when modal is active) -->
-    <div id="typeform-backdrop" style="display: none;"></div>
-    <!-- Container for embedded Typeform -->
-      <div id="typeform-container" style="display: none;">
-        <button id="closeTypeformButton">✕</button> <!-- Button to close the Typeform modal -->
-      <!-- Embedded Typeform iframe -->
-        <iframe 
-          src="https://virtusgroupgyms.fillout.com/gymmembership"
-          style="border: none;" 
-          allow="camera; microphone; autoplay; encrypted-media;"> 
-        </iframe> <!-- Allows embedded media and permissions -->
-      </div>
+<main role="main" aria-label="Main Content">  <!-- Main content area starts here -->
+  <!-- Backdrop for modal (dims background when modal is active) -->
+  <div id="typeform-backdrop" style="display: none;" aria-hidden="true"></div>
+  <!-- Container for embedded Typeform -->
+  <div id="typeform-container" style="display: none;" role="dialog" aria-label="Membership Signup Form">
+    <button id="closeTypeformButton" aria-label="Close Form">✕</button> <!-- Button to close the Typeform modal -->
+    <!-- Embedded Typeform iframe -->
+    <iframe 
+      src="https://virtusgroupgyms.fillout.com/gymmembership"
+      style="border: none;" 
+      allow="camera; microphone; autoplay; encrypted-media;"> 
+    </iframe> <!-- Allows embedded media and permissions -->
+  </div>
 
-    <section id="home"> <!-- Home section of the website -->
-      <h2>Welcome to Virtus Group Gym</h2> <!-- Section heading -->
-        <p class="text-box">
-          Destination for all things fitness and wellness. At Virtus Group, we believe everyone has a fitness journey—either training for a sport or improving their image. Everyone has the right to develop their body and mind.
-        </p>
-      <h2>Our Gym</h2> <!-- Sub-heading introducing gym features -->
-        <br> <!-- Line break for spacing -->
-      <div class="widgets-container"> <!-- Container for all gym feature widgets -->
-        <details class="PT-widget first-widget" data-widget="weightlifting"> <!-- First collapsible widget for Weightlifting -->
-          <summary>Weightlifting</summary> <!-- Widget summary shown before expansion -->
-            <div class="widget-content"> <!-- Content shown when widget is expanded -->
-              <button class="close-widget">Close</button> <!-- Button to close the widget -->
-               <div class="weightlift-description"> <!-- Description of weightlifting area -->
-                 <h2 style="color: blue;">Build Strength & Power</h2>
-                 <p style="color: white;">
-                   Our weightlifting zone is equipped with top-tier barbells, dumbbells, racks, and platforms designed for both beginners and serious lifters. Whether you're training for strength, size, or performance, we provide the tools and space to help you progress.
-                 </p>
-               </div>
-             <div class="weightlift-features"> <!-- Key features of the weightlifting zone -->
-               <div class="feature-box">
-                 <h3 style="color: blue;">Olympic Platforms</h3>
-                 <p style="color: white;">Perfect for clean and jerks, snatches, and heavy deadlifts. Built with shock-absorbent flooring.</p>
-               </div>
-               <div class="feature-box">
-                 <h3 style="color: blue;">Free Weights</h3>
-                 <p style="color: white;">Over 3,000kg of free weights ranging from 2.5kg to 60kg dumbbells, barbells, and kettlebells.</p>
-               </div>
-               <div class="feature-box">
-                 <h3 style="color: blue;">Machines & Racks</h3>
-                 <p style="color: white;">State-of-the-art squat racks, bench presses, cable machines, and Smith machines.</p>
-               </div>
-             </div>
-             <div class="image-grid"> <!-- Image gallery for weightlifting -->
-               <div class="image-container"><img src="home-widget-1/image-1-widget-1.png" alt="Platform"></div>
-               <div class="image-container"><img src="home-widget-1/image-2-widget-1.png" alt="Free-weights"></div>
-               <div class="image-container"><img src="home-widget-1/image-3-widget-1.png" alt="Lifting-Rack"></div>
-               <div class="image-container"><img src="home-widget-1/image-4-widget-1.jpeg" alt="Training-in-action"></div>
-             </div>
-            </div>
-        </details>
-        <details class="PT-widget second-widget" data-widget="cardio"> <!-- Second collapsible widget for Cardio Areas -->
-          <summary>Cardio Areas</summary>
-            <div class="widget-content">
-              <button class="close-widget">Close</button>
-              <div class="cardio-description"> <!-- Description of cardio training zone -->
-               <h2 style="color: blue;">Endurance. Energy. Elevation.</h2>
-               <p style="color: white;">
-                  Our cardio areas are designed to keep your heart pumping and your energy high. Whether you're a morning treadmill runner or a late-night spin fanatic, our zone offers both comfort and intensity with equipment that adapts to your training level.
-                  With cityscape views, integrated media stations, and smart tracking technology, your cardio experience is both immersive and effective.
-               </p>
-              </div>
-              <div class="cardio-features"> <!-- Key features of the cardio area -->
-                <div class="feature-box">
-                 <h3 style="color: blue;">Treadmills & Stairmasters</h3>
-                 <p style="color: white;">Multiple incline, speed, and HIIT program options for all fitness levels. Shock-absorbing surfaces minimize joint strain.</p>
-                </div>
-                <div class="feature-box">
-                 <h3 style="color: blue;">Spin & Air Bikes</h3>
-                 <p style="color: white;">Perfect for high-intensity intervals or steady-state cardio, with adjustable resistance and ergonomic seating.</p>
-                </div>
-                <div class="feature-box">
-                 <h3 style="color: blue;">Rowing & Ellipticals</h3>
-                 <p style="color: white;">Low-impact options that boost cardiovascular health, balance, and full-body coordination.</p>
-                </div>
-              </div>
-              <div class="image-grid"> <!-- Image gallery for cardio area -->
-               <div class="image-container"><img src="home-widget-2/image-1-widget-2.png" alt="Treadmill-Zone"></div>
-               <div class="image-container"><img src="home-widget-2/image-2-widget-2.png" alt="Spin-Bikes"></div>
-               <div class="image-container"><img src="home-widget-2/image-3-widget-2.png" alt="Row-Machines"></div>
-               <div class="image-container"><img src="home-widget-2/image-4-widget-2.png" alt="Ellipticals-Area"></div>
-              </div>
-            </div>
-        </details>
-        <details class="PT-widget third-widget" data-widget="trainers"> <!-- Third collapsible widget for Personal Trainers -->
-          <summary>Personal Trainers</summary>
-            <div class="widget-content">
-              <button class="close-widget">Close</button> <!-- Button to close the widget -->
-              <div class="trainer-description"> <!-- Description of personal training services -->
-               <h2 style="color: blue;">Guided Progress. Personalised Results.</h2>
-               <p style="color: white;">
-                Our certified personal trainers are here to take your training to the next level. Whether your goal is fat loss, muscle gain, athletic performance, or rehabilitation, we match you with the right trainer to suit your journey.
-                Expect personalized programs, expert technique correction, nutrition advice, and accountability from experienced professionals who care about your progress.
-               </p>
-              </div>
-              <div class="trainer-features"> <!-- Key features of personal training services -->
-                <div class="feature-box">
-                 <h3 style="color: blue;">One-on-One Coaching</h3>
-                 <p style="color: white;">Get focused attention on your form, progress tracking, and goal-specific programming tailored to you.</p>
-                </div>
-                <div class="feature-box">
-                 <h3 style="color: blue;">Small Group Training</h3>
-                 <p style="color: white;">Train with a friend or in small groups of 3–5 with shared goals — keeping energy high and costs low.</p>
-                </div>
-                <div class="feature-box">
-                 <h3 style="color: blue;">Sports Performance</h3>
-                 <p style="color: white;">Speed, agility, and strength coaching for athletes preparing for competitions or improving physical performance.</p>
-                </div>
-              </div>
-              <div class="image-grid"> <!-- Image gallery for personal training -->
-               <div class="image-container"><img src="home-widget-3/image-1-widget-3.jpeg" alt="Personal-Coaching"></div>
-               <div class="image-container"><img src="home-widget-3/image-2-widget-3.png" alt="Trainer-with-Client"></div>
-               <div class="image-container"><img src="home-widget-3/image-3-widget-3.png" alt="Small-Group-Training"></div>
-               <div class="image-container"><img src="home-widget-3/image-4-widget-3.png" alt="Sports-Performance-Coaching"></div>
-              </div>
-            </div>
-        </details>
-        <div class="icon-container"> <!-- Container for icon-based navigation -->
-          <div class="icon-group">
-            <div class="icon-item">
-              <img src="home-icon-content/image-1-icons.png" alt="Weightlifting-Icon"> <!-- Icon for weightlifting -->
-            </div>
-              <p>Weight lifting</p>
-          </div>
-                
-          <div class="icon-group">
-            <div class="icon-item">
-              <img src="home-icon-content/image-2-icons.png" alt="Cardio-Icon"> <!-- Icon for cardio -->
-            </div>
-              <p>Cardio Areas</p>
-          </div>
-                
-          <div class="icon-group">
-            <div class="icon-item">
-              <img src="home-icon-content/image-3-icons.png" alt="Personal-Trainers-Icon"> <!-- Icon for trainers -->
-            </div>
-              <p>Personal Trainers</p>
-          </div>
-        </div>
-        <div class="fade-container"> <!-- Container for auto-fading promotional paragraphs -->
-            <div class="fade-paragraph fade-1">
-              <p>Our gym is equipped with the latest technology and equipment to help you achieve your fitness goals. We offer a variety of classes, personal training sessions, and wellness programs to cater to all fitness levels.</p>
-            </div>
-            <div class="fade-paragraph fade-2">
-              <p>At our facility, we believe fitness is more than a routine — it’s a lifestyle. From strength and conditioning to recovery and wellness, our space is designed to support every step of your journey.</p>
-            </div>
-            <div class="fade-paragraph fade-3">
-              <p>Whether you're just starting out or pushing elite performance, our expert trainers and supportive community help you train smarter, recover faster, and stay motivated throughout.</p>
-            </div>
-            <div class="fade-paragraph fade-4">
-              <p>With 24/7 access, a fully immersive training environment, and dedicated zones for cardio, weightlifting, and functional fitness, we give you the freedom and flexibility to own your fitness.</p>
-            </div>
-        </div> 
-      </div> <!-- Close widgets-container -->
-    </section> <!-- End of Home Section -->
 
-    <section id="about"> <!-- 'About' section providing information about Virtus Group -->
-      <div class="about-container"> <!-- Main container for the about section -->
-        <h2>About Virtus Group</h2> <!-- Section heading -->
-        <p style="color: black;"  class="about-intro">
-          At Virtus Group, fitness meets purpose...
-        </p>
-        <div class="about-grid-layout"> <!-- Grid layout divides section into timeline and right-side content -->
-          <div class="timeline-column"> <!-- Left column dedicated to the timeline -->
-            <div class="virtus-timeline"> <!-- Timeline container -->
-              <h3 class="timeline-title">Timeline</h3> <!-- Timeline heading -->
-                <ul class="timeline"> <!-- List of timeline events -->
-                  <li class="timeline-item" data-icon="🏋️‍♂️"> <!-- Timeline item for 2018 -->
-                    <div class="timeline-date">2018</div>
-                      <div class="timeline-content">
-                        <h4>Founded</h4>
-                        <p>Virtus Group opens its doors...</p>
-                      </div>
-                  </li>
-                  <li class="timeline-item" data-icon="📱"> <!-- Timeline item for 2020 -->
-                    <div class="timeline-date">2020</div>
-                      <div class="timeline-content">
-                        <h4>Expansion & Digital Growth</h4>
-                        <p>Launched our mobile fitness tracking app and expanded facilities with dedicated strength and mobility zones.</p>
-                      </div>
-                  </li>
-                  <li class="timeline-item" data-icon="🤖"> <!-- Timeline item for 2023 -->
-                    <div class="timeline-date">2023</div>
-                      <div class="timeline-content">
-                        <h4>Futuristic Upgrade</h4>
-                        <p>Introduced AI-guided personal training pods and integrated biometric feedback into equipment.</p>
-                      </div>
-                  </li>
-                  <li class="timeline-item" data-icon="🌐"> <!-- Timeline item for 2024 -->
-                    <div class="timeline-date">2024</div>
-                      <div class="timeline-content">
-                        <h4>Community Platform</h4>
-                        <p>Launched VirtusConnect – a virtual platform for remote coaching, live workouts, and performance analytics.</p>
-                      </div>
-                  </li>
-                  <li class="timeline-item" data-icon="🚀"> <!-- Timeline item for 2025 -->
-                    <div class="timeline-date">2025</div>
-                      <div class="timeline-content">
-                        <h4>Next Gen Facilities</h4>
-                        <p>Plans for fully immersive VR training zones, AI-driven class programming, and international expansion underway.</p>
-                      </div>
-                  </li>
-                </ul>
-            </div>
-          </div> <!-- /timeline-column -->
-          <!-- Right column: All other content -->
-          <div class="about-right-content"> <!-- Right column containing features, info boxes, and map -->
-            <div class="about-grid"> <!-- Grid layout for features -->
-              <div class="about-feature"> <!-- Feature: Built for Tomorrow -->
-                <h3>🚀 Built for Tomorrow</h3>
-                <p>Step into a next-gen fitness environment engineered for the future. 
-                   Our facility features AI-powered pods that adapt workouts in real-time, 
-                   ambient lighting that reacts to your energy output, 
-                   and smart flooring that tracks motion and posture accuracy to reduce injury and enhance performance.
-                </p>
-              </div>
-              <div class="about-feature"> <!-- Feature: Smart Fitness -->
-                <h3>🧠 Smart Fitness</h3>
-                <p>From biometric wearables to live performance dashboards, Virtus enables you to unlock your body's full potential. 
-                   Receive instant insights into recovery, VO₂ max, and mobility while syncing your progress with your personalised 
-                   Virtus training plan — accessible both in-house and on the go.
-                </p>
-              </div>
-              <div class="about-feature"> <!-- Feature: Community Culture -->
-                <h3>🤝 Community Culture</h3>
-                <p>More than machines — we build meaningful connections.
-                   Whether you're attending a beginner workshop, recovery session, or elite competition training, you're part of a team that lifts each other up. 
-                   Our inclusive events, wellness check-ins, and member socials keep you engaged and motivated.
-                </p>
-              </div>
-              <div class="about-feature"> <!-- Feature: Virtual Integration -->
-                <h3>🌐 Virtual Integration</h3>
-                <p>Through VirtusConnect, bring the gym to your fingertips. Access remote live sessions, AI-personalised programs, and one-on-one coaching — 
-                   all synchronised with your wearable data. It's a full hybrid training experience, whether you're at home, travelling, 
-                   or in one of our partner gyms globally.
-                </p>
-              </div>
-            </div>
-            <!-- Contact Info Boxes -->
-            <div class="info-layout"> <!-- Layout for opening hours, address, and contact -->
-              <div class="contact-box"> <!-- Box: Opening Hours -->
-                <h3 style="color: white;">Opening Hours</h3>
-                <table>
-                  <tr><th></th><th>Open</th><th>Close</th></tr>
-                  <tr><td>Mon – Fri</td><td>09:00</td><td>21:00</td></tr>
-                  <tr><td>Weekend</td><td>10:00</td><td>22:00</td></tr>
-                </table>
-              </div>
-              <div class="contact-box"> <!-- Box: Address -->
-                <h3 style="color: white;">Address</h3>
-                <p style="color: white;">Virtus Group<br>Rowley Road<br>Boston, PE21 6JE</p>
-              </div>
-              <div class="contact-box"> <!-- Box: Contact Info -->
-                <h3 style="color: #080fdf">Contact Us</h3>
-                <p style="color: white;"><strong>Phone:</strong> 0800 567 435</p>
-                <p style="color: white;"><strong>Email:</strong> <a href="mailto:virtusgroup@gmail.com">virtusgroup@gmail.com</a></p>
-              </div>
-            </div>
-            <!-- Map Section -->
-            <div class="map-wrapper"> <!-- Container for embedded Google Map -->
-              <p class="map-paragraph">📍 Our Location</p>
-             <div class="map-container"> <!-- Embedded map iframe -->
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3215.9219028706593!2d-0.01780162259704524!3d52.974393272183754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48780a114c52a16f%3A0xb6a66837b260c127!2sGeoff%20Moulder%20Leisure%20Complex!5e1!3m2!1sen!2suk!4v1748535907440!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
-             </div>
-            </div>
-          </div> <!-- /about-right-content -->
-        </div> <!-- /about-grid-layout -->
-      </div>
-    </section>
-</main>
-
-<footer> <!-- Main footer section -->
-    <div class="footer-container"> <!-- Wrapper for all footer content -->
-      <div class="footer-consultation"> <!-- Consultation form block -->
-        <h2>Book a Design Consultation</h2>
-        <p>Virtual or in person...</p>
-        <form class="consultation-form"> <!-- Design consultation form -->
-          <input type="text" placeholder="Name*" required> <!-- Name input -->
-          <input type="email" placeholder="Email*" required> <!-- Email input -->
-          <input type="tel" placeholder="Telephone*" required> <!-- Phone number input -->
-          <div class="consent"> <!-- Optional newsletter sign-up -->
-            <input type="checkbox" id="consent">
-            <label for="consent">Sign me up for updates.</label>
-          </div>
-          <button type="submit">Submit</button> <!-- Submit button -->
-        </form>
-      </div>
-      <div class="footer-section newsletter"> <!-- Newsletter signup section -->
-        <h2>Join Our Newsletter</h2>
-        <p>Stay updated on the latest offers and equipment.</p>
-        <form class="newsletter-form"> <!-- Newsletter form -->
-          <input type="email" placeholder="Enter your email" required> <!-- Email input -->
-          <button type="submit">Subscribe</button> <!-- Subscribe button -->
-        </form>
-      </div>
-      <div class="footer-columns"> <!-- Footer columns layout -->
-        <div class="footer-section about"> <!-- About Us column -->
-          <h2>About Us</h2>
-          <p>Virtus Group is a future-focused fitness community dedicated to innovation, 
-            performance, and wellbeing. From AI-powered training to expert coaching and 
-            immersive virtual programs, we empower every member to reach their full potential — body and mind.
+    <section id="home" aria-labelledby="home-heading"> <!-- Home section of the website -->
+  <h2 id="home-heading">Welcome to Virtus Group Gym</h2> <!-- Section heading -->
+  <p class="text-box">
+    Destination for all things fitness and wellness. At Virtus Group, we believe everyone has a fitness journey—either training for a sport or improving their image. Everyone has the right to develop their body and mind.
+  </p>
+  <h2>Our Gym</h2> <!-- Sub-heading introducing gym features -->
+  <br> <!-- Line break for spacing -->
+  <div class="widgets-container" role="region" aria-label="Gym Features"> <!-- Container for all gym feature widgets -->
+    <details class="PT-widget first-widget" data-widget="weightlifting"> <!-- First collapsible widget for Weightlifting -->
+      <summary aria-label="Weightlifting Section">Weightlifting</summary> <!-- Widget summary shown before expansion -->
+      <div class="widget-content" role="region" aria-label="Weightlifting Content"> <!-- Content shown when widget is expanded -->
+        <button class="close-widget" aria-label="Close Weightlifting Widget">Close</button> <!-- Button to close the widget -->
+        <div class="weightlift-description"> <!-- Description of weightlifting area -->
+          <h2 style="color: blue;">Build Strength & Power</h2>
+          <p style="color: white;">
+            Our weightlifting zone is equipped with top-tier barbells, dumbbells, racks, and platforms designed for both beginners and serious lifters. Whether you're training for strength, size, or performance, we provide the tools and space to help you progress.
           </p>
         </div>
-        <div class="footer-section links"> <!-- Quick Links column -->
-          <h2>Quick Links</h2>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#trainers">Trainers</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#resources">Membership Login</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#">Contact</a></li>
+        <div class="weightlift-features" role="region" aria-label="Weightlifting Features"> <!-- Key features of the weightlifting zone -->
+          <div class="feature-box">
+            <h3 style="color: blue;">Olympic Platforms</h3>
+            <p style="color: white;">Perfect for clean and jerks, snatches, and heavy deadlifts. Built with shock-absorbent flooring.</p>
+          </div>
+          <div class="feature-box">
+            <h3 style="color: blue;">Free Weights</h3>
+            <p style="color: white;">Over 3,000kg of free weights ranging from 2.5kg to 60kg dumbbells, barbells, and kettlebells.</p>
+          </div>
+          <div class="feature-box">
+            <h3 style="color: blue;">Machines & Racks</h3>
+            <p style="color: white;">State-of-the-art squat racks, bench presses, cable machines, and Smith machines.</p>
+          </div>
+        </div>
+        <div class="image-grid" role="region" aria-label="Weightlifting Image Gallery"> <!-- Image gallery for weightlifting -->
+          <div class="image-container"><img src="home-widget-1/image-1-widget-1.png" alt="Platform"></div>
+          <div class="image-container"><img src="home-widget-1/image-2-widget-1.png" alt="Free-weights"></div>
+          <div class="image-container"><img src="home-widget-1/image-3-widget-1.png" alt="Lifting-Rack"></div>
+          <div class="image-container"><img src="home-widget-1/image-4-widget-1.jpeg" alt="Training-in-action"></div>
+        </div>
+      </div>
+    </details>
+        <details class="PT-widget second-widget" data-widget="cardio"> <!-- Second collapsible widget for Cardio Areas -->
+  <summary aria-label="Cardio Areas Section">Cardio Areas</summary>
+  <div class="widget-content" role="region" aria-label="Cardio Content">
+    <button class="close-widget" aria-label="Close Cardio Widget">Close</button>
+    <div class="cardio-description"> <!-- Description of cardio training zone -->
+      <h2 style="color: blue;">Endurance. Energy. Elevation.</h2>
+      <p style="color: white;">
+        Our cardio areas are designed to keep your heart pumping and your energy high. Whether you're a morning treadmill runner or a late-night spin fanatic, our zone offers both comfort and intensity with equipment that adapts to your training level.
+        With cityscape views, integrated media stations, and smart tracking technology, your cardio experience is both immersive and effective.
+      </p>
+    </div>
+    <div class="cardio-features" role="region" aria-label="Cardio Features"> <!-- Key features of the cardio area -->
+      <div class="feature-box">
+        <h3 style="color: blue;">Treadmills & Stairmasters</h3>
+        <p style="color: white;">Multiple incline, speed, and HIIT program options for all fitness levels. Shock-absorbing surfaces minimize joint strain.</p>
+      </div>
+      <div class="feature-box">
+        <h3 style="color: blue;">Spin & Air Bikes</h3>
+        <p style="color: white;">Perfect for high-intensity intervals or steady-state cardio, with adjustable resistance and ergonomic seating.</p>
+      </div>
+      <div class="feature-box">
+        <h3 style="color: blue;">Rowing & Ellipticals</h3>
+        <p style="color: white;">Low-impact options that boost cardiovascular health, balance, and full-body coordination.</p>
+      </div>
+    </div>
+    <div class="image-grid" role="region" aria-label="Cardio Image Gallery"> <!-- Image gallery for cardio area -->
+      <div class="image-container"><img src="home-widget-2/image-1-widget-2.png" alt="Treadmill-Zone"></div>
+      <div class="image-container"><img src="home-widget-2/image-2-widget-2.png" alt="Spin-Bikes"></div>
+      <div class="image-container"><img src="home-widget-2/image-3-widget-2.png" alt="Row-Machines"></div>
+      <div class="image-container"><img src="home-widget-2/image-4-widget-2.png" alt="Ellipticals-Area"></div>
+    </div>
+  </div>
+</details>
+
+<details class="PT-widget third-widget" data-widget="trainers"> <!-- Third collapsible widget for Personal Trainers -->
+  <summary aria-label="Personal Trainers Section">Personal Trainers</summary>
+  <div class="widget-content" role="region" aria-label="Personal Trainers Content">
+    <button class="close-widget" aria-label="Close Personal Trainers Widget">Close</button> <!-- Button to close the widget -->
+    <div class="trainer-description"> <!-- Description of personal training services -->
+      <h2 style="color: blue;">Guided Progress. Personalised Results.</h2>
+      <p style="color: white;">
+        Our certified personal trainers are here to take your training to the next level. Whether your goal is fat loss, muscle gain, athletic performance, or rehabilitation, we match you with the right trainer to suit your journey.
+        Expect personalized programs, expert technique correction, nutrition advice, and accountability from experienced professionals who care about your progress.
+      </p>
+    </div>
+    <div class="trainer-features" role="region" aria-label="Trainer Features"> <!-- Key features of personal training services -->
+      <div class="feature-box">
+        <h3 style="color: blue;">One-on-One Coaching</h3>
+        <p style="color: white;">Get focused attention on your form, progress tracking, and goal-specific programming tailored to you.</p>
+      </div>
+      <div class="feature-box">
+        <h3 style="color: blue;">Small Group Training</h3>
+        <p style="color: white;">Train with a friend or in small groups of 3–5 with shared goals — keeping energy high and costs low.</p>
+      </div>
+      <div class="feature-box">
+        <h3 style="color: blue;">Sports Performance</h3>
+        <p style="color: white;">Speed, agility, and strength coaching for athletes preparing for competitions or improving physical performance.</p>
+      </div>
+    </div>
+    <div class="image-grid" role="region" aria-label="Trainer Image Gallery"> <!-- Image gallery for personal training -->
+      <div class="image-container"><img src="home-widget-3/image-1-widget-3.jpeg" alt="Personal-Coaching"></div>
+      <div class="image-container"><img src="home-widget-3/image-2-widget-3.png" alt="Trainer-with-Client"></div>
+      <div class="image-container"><img src="home-widget-3/image-3-widget-3.png" alt="Small-Group-Training"></div>
+      <div class="image-container"><img src="home-widget-3/image-4-widget-3.png" alt="Sports-Performance-Coaching"></div>
+    </div>
+  </div>
+</details>
+
+       <div class="icon-container" role="region" aria-label="Navigation Icons"> <!-- Container for icon-based navigation -->
+  <div class="icon-group">
+    <div class="icon-item">
+      <img src="home-icon-content/image-1-icons.png" alt="Weightlifting-Icon"> <!-- Icon for weightlifting -->
+    </div>
+    <p>Weight lifting</p>
+  </div>
+        
+  <div class="icon-group">
+    <div class="icon-item">
+      <img src="home-icon-content/image-2-icons.png" alt="Cardio-Icon"> <!-- Icon for cardio -->
+    </div>
+    <p>Cardio Areas</p>
+  </div>
+        
+  <div class="icon-group">
+    <div class="icon-item">
+      <img src="home-icon-content/image-3-icons.png" alt="Personal-Trainers-Icon"> <!-- Icon for trainers -->
+    </div>
+    <p>Personal Trainers</p>
+  </div>
+</div>
+
+<div class="fade-container" role="region" aria-label="Promotional Highlights"> <!-- Container for auto-fading promotional paragraphs -->
+  <div class="fade-paragraph fade-1">
+    <p>Our gym is equipped with the latest technology and equipment to help you achieve your fitness goals. We offer a variety of classes, personal training sessions, and wellness programs to cater to all fitness levels.</p>
+  </div>
+  <div class="fade-paragraph fade-2">
+    <p>At our facility, we believe fitness is more than a routine — it’s a lifestyle. From strength and conditioning to recovery and wellness, our space is designed to support every step of your journey.</p>
+  </div>
+  <div class="fade-paragraph fade-3">
+    <p>Whether you're just starting out or pushing elite performance, our expert trainers and supportive community help you train smarter, recover faster, and stay motivated throughout.</p>
+  </div>
+  <div class="fade-paragraph fade-4">
+    <p>With 24/7 access, a fully immersive training environment, and dedicated zones for cardio, weightlifting, and functional fitness, we give you the freedom and flexibility to own your fitness.</p>
+  </div>
+</div> 
+</div>
+</section>
+ <!-- End of Home Section -->
+<section id="about" aria-labelledby="about-heading"> <!-- 'About' section providing information about Virtus Group -->
+  <div class="about-container"> <!-- Main container for the about section -->
+    <h2 id="about-heading">About Virtus Group</h2> <!-- Section heading -->
+    <p style="color: black;"  class="about-intro">
+      At Virtus Group, fitness meets purpose...
+    </p>
+    <div class="about-grid-layout"> <!-- Grid layout divides section into timeline and right-side content -->
+      <div class="timeline-column" role="region" aria-label="Virtus Group Milestones Timeline"> <!-- Left column dedicated to the timeline -->
+        <div class="virtus-timeline"> <!-- Timeline container -->
+          <h3 class="timeline-title">Timeline</h3> <!-- Timeline heading -->
+          <ul class="timeline"> <!-- List of timeline events -->
+            <li class="timeline-item" data-icon="🏋️‍♂️" role="listitem" aria-label="2018: Founded"> <!-- Timeline item for 2018 -->
+              <div class="timeline-date">2018</div>
+              <div class="timeline-content">
+                <h4>Founded</h4>
+                <p>Virtus Group opens its doors...</p>
+              </div>
+            </li>
+            <li class="timeline-item" data-icon="📱" role="listitem" aria-label="2020: Expansion and Digital Growth"> <!-- Timeline item for 2020 -->
+              <div class="timeline-date">2020</div>
+              <div class="timeline-content">
+                <h4>Expansion & Digital Growth</h4>
+                <p>Launched our mobile fitness tracking app and expanded facilities with dedicated strength and mobility zones.</p>
+              </div>
+            </li>
+            <li class="timeline-item" data-icon="🤖" role="listitem" aria-label="2023: Futuristic Upgrade"> <!-- Timeline item for 2023 -->
+              <div class="timeline-date">2023</div>
+              <div class="timeline-content">
+                <h4>Futuristic Upgrade</h4>
+                <p>Introduced AI-guided personal training pods and integrated biometric feedback into equipment.</p>
+              </div>
+            </li>
+            <li class="timeline-item" data-icon="🌐" role="listitem" aria-label="2024: Community Platform Launch"> <!-- Timeline item for 2024 -->
+              <div class="timeline-date">2024</div>
+              <div class="timeline-content">
+                <h4>Community Platform</h4>
+                <p>Launched VirtusConnect – a virtual platform for remote coaching, live workouts, and performance analytics.</p>
+              </div>
+            </li>
+            <li class="timeline-item" data-icon="🚀" role="listitem" aria-label="2025: Next Gen Facilities Planned"> <!-- Timeline item for 2025 -->
+              <div class="timeline-date">2025</div>
+              <div class="timeline-content">
+                <h4>Next Gen Facilities</h4>
+                <p>Plans for fully immersive VR training zones, AI-driven class programming, and international expansion underway.</p>
+              </div>
+            </li>
           </ul>
         </div>
-        <div class="footer-section contact"> <!-- Contact information column -->
-          <h2>Contact</h2>
-          <p>Email: VirtusGroupGyms@gmail.com</p>
-          <p>Phone: 01834 567254</p>
-          <p>Location: Geoff Moulder Leisure Complex
-                          Rowley Rd, Boston PE21 6JE  
-          </p>
+      </div><!-- /timeline-column -->
+          <!-- Right column: All other content -->
+          <div class="about-right-content" role="region" aria-label="Virtus Group Features and Map"> <!-- Right column containing features, info boxes, and map -->
+  <div class="about-grid" role="region" aria-label="Key Features of Virtus Group"> <!-- Grid layout for features -->
+    <div class="about-feature"> <!-- Feature: Built for Tomorrow -->
+      <h3>🚀 Built for Tomorrow</h3>
+      <p>Step into a next-gen fitness environment engineered for the future. 
+         Our facility features AI-powered pods that adapt workouts in real-time, 
+         ambient lighting that reacts to your energy output, 
+         and smart flooring that tracks motion and posture accuracy to reduce injury and enhance performance.
+      </p>
+    </div>
+    <div class="about-feature"> <!-- Feature: Smart Fitness -->
+      <h3>🧠 Smart Fitness</h3>
+      <p>From biometric wearables to live performance dashboards, Virtus enables you to unlock your body's full potential. 
+         Receive instant insights into recovery, VO₂ max, and mobility while syncing your progress with your personalised 
+         Virtus training plan — accessible both in-house and on the go.
+      </p>
+    </div>
+    <div class="about-feature"> <!-- Feature: Community Culture -->
+      <h3>🤝 Community Culture</h3>
+      <p>More than machines — we build meaningful connections.
+         Whether you're attending a beginner workshop, recovery session, or elite competition training, you're part of a team that lifts each other up. 
+         Our inclusive events, wellness check-ins, and member socials keep you engaged and motivated.
+      </p>
+    </div>
+    <div class="about-feature"> <!-- Feature: Virtual Integration -->
+      <h3>🌐 Virtual Integration</h3>
+      <p>Through VirtusConnect, bring the gym to your fingertips. Access remote live sessions, AI-personalised programs, and one-on-one coaching — 
+         all synchronised with your wearable data. It's a full hybrid training experience, whether you're at home, travelling, 
+         or in one of our partner gyms globally.
+      </p>
+    </div>
+  </div>
+
+            <!-- Contact Info Boxes -->
+          <div class="info-layout" role="region" aria-label="Contact Information"> <!-- Layout for opening hours, address, and contact -->
+            <div class="contact-box" role="region" aria-label="Opening Hours"> <!-- Box: Opening Hours -->
+              <h3 style="color: white;">Opening Hours</h3>
+              <table>
+                <tr><th></th><th>Open</th><th>Close</th></tr>
+                <tr><td>Mon – Fri</td><td>09:00</td><td>21:00</td></tr>
+                <tr><td>Weekend</td><td>10:00</td><td>22:00</td></tr>
+              </table>
+            </div>
+            <div class="contact-box" role="region" aria-label="Gym Address"> <!-- Box: Address -->
+              <h3 style="color: white;">Address</h3>
+              <p style="color: white;">Virtus Group<br>Rowley Road<br>Boston, PE21 6JE</p>
+            </div>
+            <div class="contact-box" role="region" aria-label="Contact Methods"> <!-- Box: Contact Info -->
+              <h3 style="color: #080fdf">Contact Us</h3>
+              <p style="color: white;"><strong>Phone:</strong> 0800 567 435</p>
+              <p style="color: white;"><strong>Email:</strong> <a href="mailto:virtusgroup@gmail.com">virtusgroup@gmail.com</a></p>
+            </div>
+          </div>
+
+          <!-- Map Section -->
+          <div class="map-wrapper" role="region" aria-label="Gym Location Map"> <!-- Container for embedded Google Map -->
+            <p class="map-paragraph">📍 Our Location</p>
+            <div class="map-container"> <!-- Embedded map iframe -->
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3215.9219028706593!2d-0.01780162259704524!3d52.974393272183754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48780a114c52a16f%3A0xb6a66837b260c127!2sGeoff%20Moulder%20Leisure%20Complex!5e1!3m2!1sen!2suk!4v1748535907440!5m2!1sen!2suk" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+        </div> <!-- /about-right-content -->
+      </div> <!-- /about-grid-layout -->
+    </div>
+  </section>
+</main>
+
+<footer role="contentinfo" aria-label="Site Footer"> <!-- Main footer section -->
+  <div class="footer-container"> <!-- Wrapper for all footer content -->
+    <div class="footer-consultation" aria-labelledby="consultation-heading"> <!-- Consultation form block -->
+      <h2 id="consultation-heading">Book a Design Consultation</h2>
+      <p>Virtual or in person...</p>
+      <form class="consultation-form" aria-label="Design consultation form"> <!-- Design consultation form -->
+        <input type="text" placeholder="Name*" required aria-label="Your name"> <!-- Name input -->
+        <input type="email" placeholder="Email*" required aria-label="Your email"> <!-- Email input -->
+        <input type="tel" placeholder="Telephone*" required aria-label="Your phone number"> <!-- Phone number input -->
+        <div class="consent"> <!-- Optional newsletter sign-up -->
+          <input type="checkbox" id="consent" aria-labelledby="consent-label">
+          <label id="consent-label" for="consent">Sign me up for updates.</label>
         </div>
-      </div> <!-- /footer-columns -->
-    </div> <!-- /footer-container -->
-    <div class="footer-bottom"> <!-- Footer bottom bar with legal links -->
-      <p>&copy; 2025 VirtusGroup Limited. All rights reserved. <br>
-        <a href="documents/Virtus-group-Operations-overview.docx" download class="footer-download-btn">Terms & Conditions</a> |
-        <a href="documents/Virtus_Group_Privacy_Policy.pptx" download class="footer-download-btn">Privacy Policy</a> |
-        <a href="documents/Virtus_Group_Cookies_Policy.pptx" download class="footer-download-btn">Cookies</a> |
-          Web Design: George Baldwin
-      </p>
+        <button type="submit">Submit</button> <!-- Submit button -->
+      </form>
     </div>
-    <div class="social-media"> <!-- Social media icons with links -->
-      <a href="https://www.instagram.com/yourpage" target="_blank" rel="noopener">
-        <img src="footer-content/instagram.png" alt="instagram">
-      </a>
-      <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener">
-        <img src="footer-content/facebook.png" alt="facebook">
-      </a>
-      <a href="https://www.twitter.com/yourpage" target="_blank" rel="noopener">
-        <img src="footer-content/twitter.png" alt="twitter">
-      </a>
+
+    <div class="footer-section newsletter" aria-labelledby="newsletter-heading"> <!-- Newsletter signup section -->
+      <h2 id="newsletter-heading">Join Our Newsletter</h2>
+      <p>Stay updated on the latest offers and equipment.</p>
+      <form class="newsletter-form" aria-label="Newsletter signup form"> <!-- Newsletter form -->
+        <input type="email" placeholder="Enter your email" required aria-label="Your email address"> <!-- Email input -->
+        <button type="submit">Subscribe</button> <!-- Subscribe button -->
+      </form>
     </div>
-    <Div class="footer-credits"> <!-- W3C CSS validation badge -->
-      <p>
-        <a href="https://jigsaw.w3.org/css-validator/check/referer">
-          <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!">
-        </a>
-      </p>
-    </Div>
-  </footer>
+
+    <div class="footer-columns"> <!-- Footer columns layout -->
+      <div class="footer-section about" aria-labelledby="about-heading"> <!-- About Us column -->
+        <h2 id="about-heading">About Us</h2>
+        <p>Virtus Group is a future-focused fitness community dedicated to innovation, 
+          performance, and wellbeing. From AI-powered training to expert coaching and 
+          immersive virtual programs, we empower every member to reach their full potential — body and mind.
+        </p>
+      </div>
+
+      <div class="footer-section links" aria-labelledby="quicklinks-heading"> <!-- Quick Links column -->
+        <h2 id="quicklinks-heading">Quick Links</h2>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#trainers">Trainers</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#resources">Membership Login</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section contact" aria-labelledby="contact-heading"> <!-- Contact information column -->
+        <h2 id="contact-heading">Contact</h2>
+        <p>Email: VirtusGroupGyms@gmail.com</p>
+        <p>Phone: 01834 567254</p>
+        <p>Location: Geoff Moulder Leisure Complex
+            Rowley Rd, Boston PE21 6JE  
+        </p>
+      </div>
+    </div> <!-- /footer-columns -->
+  </div> <!-- /footer-container -->
+
+  <div class="footer-bottom" aria-label="Legal information and credits"> <!-- Footer bottom bar with legal links -->
+    <p>&copy; 2025 VirtusGroup Limited. All rights reserved. <br>
+      <a href="documents/Virtus-group-Operations-overview.docx" download class="footer-download-btn">Terms & Conditions</a> |
+      <a href="documents/Virtus_Group_Privacy_Policy.pptx" download class="footer-download-btn">Privacy Policy</a> |
+      <a href="documents/Virtus_Group_Cookies_Policy.pptx" download class="footer-download-btn">Cookies</a> |
+      Web Design: George Baldwin
+    </p>
+  </div>
+
+  <div class="social-media" aria-label="Social media links"> <!-- Social media icons with links -->
+    <a href="https://www.instagram.com/yourpage" target="_blank" rel="noopener" aria-label="Instagram">
+      <img src="footer-content/instagram.png" alt="Instagram">
+    </a>
+    <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener" aria-label="Facebook">
+      <img src="footer-content/facebook.png" alt="Facebook">
+    </a>
+    <a href="https://www.twitter.com/yourpage" target="_blank" rel="noopener" aria-label="Twitter">
+      <img src="footer-content/twitter.png" alt="Twitter">
+    </a>
+  </div>
+
+  <div class="footer-credits" aria-hidden="true"> <!-- W3C CSS validation badge (visual only) -->
+    <p>
+      <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!">
+      </a>
+    </p>
+  </div>
+</footer>
+
   <script src="main.js"></script> <!-- Link to external JavaScript file for interactivity -->
-
-
 </body>
 </html>
