@@ -201,6 +201,28 @@ Below is visual proof of the key testing stages.
 ![Desktop View 3](docs/validation/responsive-desktop-2.png)  
 ![Desktop View 4](docs/validation/responsive-desktop-3.png)
 
+
+## 🖼️ Updated Views
+
+### 🖥️ Updated Desktop Home View
+![Desktop Home View](docs/newvalidations/desktop-improved.png)
+
+### 🖥️ Desktop Events Section
+![Desktop Events View](docs/newvalidations/desktop-improved1.png)
+
+### 🖥️ Desktop HYROX Section
+![HYROX Desktop View](docs/newvalidations/desktop-improved2.png)
+
+---
+
+### 📱 Updated Mobile Views
+
+### 📱 HYROX Section (Mobile)
+![HYROX Mobile View](docs/newvalidations/mobile-improved.png)
+
+### 📱 Events Section (Mobile)
+![Events Mobile View](docs/newvalidations/mobile-improved1.png)
+
 ---
 
 
