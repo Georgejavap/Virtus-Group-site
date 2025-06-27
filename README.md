@@ -203,42 +203,37 @@ Below is visual proof of the key testing stages.
 
 ---
 
-### ✅ New Improved Desktop View Tests
-![Improved Desktop View 1](docs/newvalidations/desktop-improved.png)
-![Improved Desktop View 2](docs/newvalidations/desktop-improved1.png)
-![Improved Desktop View 2](docs/newvalidations/desktop-improved2.png)
 
 
+##  Wireframes
 
-## 🧩 Wireframes
-
-### 🏠 Home Page
+###  Home Page
 ![Homepage Wireframe](docs/wireframes/homepage.png)
 
 ---
 
-### 📋 Membership Info Page
+###  Membership Info Page
 ![Membership Info Wireframe](docs/wireframes/membership.png)
 
 ---
 
-### 🏋️ Our Gym Page
+###  Our Gym Page
 ![Our Gym Wireframe](docs/wireframes/our-gym.png)
 ![Our Gym Wireframe](docs/wireframes/our-gym1.png)
 
 ---
 
-### 🎉 Events Page
+###  Events Page
 ![Events Wireframe](docs/wireframes/events.png)
 
 ---
 
-### 📍 Footer / Contact Section
+###  Footer / Contact Section
 ![Footer Wireframe](docs/wireframes/footer.png)
 
 
 
-## 🎨 Project Display Note
+##  Project Display Note
 
 While developing this project, my goal was to create a polished and fully responsive events section, with smooth full-screen overlays, centered content, and clean layout transitions — as shown in my development environment screenshots.
 
