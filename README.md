@@ -186,19 +186,29 @@ Below is visual proof of the key testing stages.
 ### Modal Interaction Test
 ![Modal Open](docs/validation/modal-open.png)  
 ![Modal Open Alternate](docs/validation/modal-open-1.png)
-
-### Mobile View Tests
+### 📱 Mobile View Tests
 ![Mobile View 1](docs/validation/responsive-mobile.png)  
 ![Mobile View 2](docs/validation/responsive-mobile-1.png)  
 ![Mobile View 3](docs/validation/responsive-mobile-2.png)  
 ![Mobile View 4](docs/validation/responsive-mobile-3.png)  
 ![Mobile View 5](docs/validation/responsive-mobile-4.png)
 
-### Desktop View Tests
+---
+
+### 💻 Original Desktop View Tests
 ![Desktop View 1](docs/validation/responsive-desktop.png)  
 ![Desktop View 2](docs/validation/responsive-desktop-1.png)  
 ![Desktop View 3](docs/validation/responsive-desktop-2.png)  
 ![Desktop View 4](docs/validation/responsive-desktop-3.png)
+
+---
+
+### ✅ New Improved Desktop View Tests
+![Improved Desktop View 1](docs/new_validations/desktop-improved.png)
+![Improved Desktop View 2](docs/new_validations/desktop-improved1.png)
+![Improved Desktop View 2](docs/new_validations/desktop-improved2.png)
+
+
 
 
 ## 🎨 Project Display Note
